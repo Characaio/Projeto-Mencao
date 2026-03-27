@@ -83,7 +83,7 @@ namespace project_mencao
             // 
             // BotRegistro
             // 
-            this.BotRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.BotRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.BotRegistro.Location = new System.Drawing.Point(193, 302);
             this.BotRegistro.Name = "BotRegistro";
             this.BotRegistro.Size = new System.Drawing.Size(375, 49);
@@ -123,12 +123,13 @@ namespace project_mencao
             // 
             this.SenhaBox.Location = new System.Drawing.Point(276, 205);
             this.SenhaBox.Name = "SenhaBox";
+            this.SenhaBox.PasswordChar = '*';
             this.SenhaBox.Size = new System.Drawing.Size(292, 20);
             this.SenhaBox.TabIndex = 4;
             // 
             // BotVoltarRegistro
             // 
-            this.BotVoltarRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.BotVoltarRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.BotVoltarRegistro.Location = new System.Drawing.Point(193, 357);
             this.BotVoltarRegistro.Name = "BotVoltarRegistro";
             this.BotVoltarRegistro.Size = new System.Drawing.Size(375, 49);
@@ -172,7 +173,6 @@ namespace project_mencao
             "Sociologia",
             "Inglês",
             "Educação Fisica",
-            "",
             "Banco De Dados",
             "Programação Web",
             "Programação Mobile",

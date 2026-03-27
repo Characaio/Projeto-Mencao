@@ -96,7 +96,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Aluno.cs" />
-    <Compile Include="Models\AlunoComboBoxDTO.cs" />
     <Compile Include="Models\TableDataDTO.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Repositories\AlunosRepository.cs" />
@@ -125,6 +124,12 @@
     <Compile Include="Models\Nota.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Telas\ProdutosTela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\ProdutosTela.Designer.cs">
+      <DependentUpon>ProdutosTela.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\RegisterTela.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +154,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Telas\ProdutosTela.resx">
+      <DependentUpon>ProdutosTela.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\RegisterTela.resx">
       <DependentUpon>RegisterTela.cs</DependentUpon>
     </EmbeddedResource>

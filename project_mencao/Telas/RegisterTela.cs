@@ -59,13 +59,22 @@ namespace project_mencao
 
                 Program._loginRepo.cadastrar_usuario(usuario);
                 Program._usuarioLogado = usuario;
-                MessageBox.Show("Cadastro realizado com sucesso!");
+                MessageBox.Show(
+                    "Cadastro realizado com sucesso!",
+                    "Ação Bem Sucedida",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Asterisk);
                 this.Hide();
                 Program.ir_para_tela_do_calculo_da_media();
             }
             else
             {
-                MessageBox.Show(Erros);
+                MessageBox.Show(
+                    Erros,
+                    "Erro",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                    );
                 return;
             }
         }

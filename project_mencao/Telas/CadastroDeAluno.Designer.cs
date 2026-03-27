@@ -39,12 +39,12 @@
             // 
             // IrParaCadastroAlunoBot
             // 
-            this.IrParaCadastroAlunoBot.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.IrParaCadastroAlunoBot.Location = new System.Drawing.Point(12, 12);
+            this.IrParaCadastroAlunoBot.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.IrParaCadastroAlunoBot.Location = new System.Drawing.Point(288, 312);
             this.IrParaCadastroAlunoBot.Name = "IrParaCadastroAlunoBot";
-            this.IrParaCadastroAlunoBot.Size = new System.Drawing.Size(175, 38);
-            this.IrParaCadastroAlunoBot.TabIndex = 30;
-            this.IrParaCadastroAlunoBot.Text = "Cadastrar Novo Aluno";
+            this.IrParaCadastroAlunoBot.Size = new System.Drawing.Size(257, 49);
+            this.IrParaCadastroAlunoBot.TabIndex = 4;
+            this.IrParaCadastroAlunoBot.Text = "Voltar ao Calculo da Media";
             this.IrParaCadastroAlunoBot.UseVisualStyleBackColor = true;
             this.IrParaCadastroAlunoBot.Click += new System.EventHandler(this.IrParaCadastroAlunoBot_Click);
             // 
@@ -54,7 +54,7 @@
             this.CadastAlunBot.Location = new System.Drawing.Point(288, 254);
             this.CadastAlunBot.Name = "CadastAlunBot";
             this.CadastAlunBot.Size = new System.Drawing.Size(257, 52);
-            this.CadastAlunBot.TabIndex = 31;
+            this.CadastAlunBot.TabIndex = 3;
             this.CadastAlunBot.Text = "Cadastrar Aluno";
             this.CadastAlunBot.UseVisualStyleBackColor = true;
             this.CadastAlunBot.Click += new System.EventHandler(this.CadastAlunBot_Click);
@@ -74,10 +74,11 @@
             this.NomeBox.Location = new System.Drawing.Point(371, 127);
             this.NomeBox.Name = "NomeBox";
             this.NomeBox.Size = new System.Drawing.Size(174, 20);
-            this.NomeBox.TabIndex = 33;
+            this.NomeBox.TabIndex = 1;
             // 
             // TurmaCombo
             // 
+            this.TurmaCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TurmaCombo.FormattingEnabled = true;
             this.TurmaCombo.Items.AddRange(new object[] {
             "DS1",
@@ -104,7 +105,9 @@
             this.TurmaCombo.Location = new System.Drawing.Point(371, 202);
             this.TurmaCombo.Name = "TurmaCombo";
             this.TurmaCombo.Size = new System.Drawing.Size(174, 21);
-            this.TurmaCombo.TabIndex = 34;
+            this.TurmaCombo.TabIndex = 2;
+            this.TurmaCombo.Tag = "";
+            this.TurmaCombo.SelectedIndexChanged += new System.EventHandler(this.TurmaCombo_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -141,6 +144,8 @@
             this.Name = "CadastroDeAluno";
             this.Text = "CadastroDeAluno";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CadastroDeAluno_FormClosing);
+            this.Load += new System.EventHandler(this.CadastroDeAluno_Load);
+            this.Shown += new System.EventHandler(this.CadastroDeAluno_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

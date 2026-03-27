@@ -76,6 +76,11 @@ namespace project_mencao
             return Notas[Bimestre.Final];
 
         }
+        /// <summary>
+        /// Adiciona uma nota com base no bimestre da nota.
+        /// Ao adicionar uma nota ja se calcula a nota do bimestre final com base em notas ja adicionadas
+        /// </summary>
+        /// <param name="nota">Nota para ser inserida</param>
         public void adicionar_Nota(Nota nota)
         {
             
@@ -113,5 +118,6 @@ namespace project_mencao
                 }
                 
             }
+        
         }
 }

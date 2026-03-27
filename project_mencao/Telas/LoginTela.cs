@@ -45,18 +45,31 @@ namespace project_mencao
                 if (Program._loginRepo.usuario_existe(usuario))
                 {
                     Program._usuarioLogado = Program._loginRepo.pegar_usuario(usuario);
-                    MessageBox.Show("Login realizado com sucesso!");
+                    MessageBox.Show(
+                        "Login realizado com sucesso!",
+                        "Ação Bem Sucedida",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Asterisk);
                     this.Hide();
                     Program.ir_para_tela_do_calculo_da_media();
                 }
                 else
                 {
-                    MessageBox.Show("Email ou senha incorretos.");
+                    MessageBox.Show(
+                        "Email ou senha incorretos.",
+                        "Erro",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
                 }
             }
             else
             {
-                MessageBox.Show(Erros);
+                MessageBox.Show(
+                    Erros,
+                    "Erro",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
 

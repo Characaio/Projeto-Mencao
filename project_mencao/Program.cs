@@ -18,9 +18,9 @@ namespace project_mencao
         static public LoginRepository _loginRepo;
         static public AlunosRepository _alunosRepo;
         static public NotasRepository _notasRepo;
+        static public ProdutosTela _produtosTela;
         static public Usuario _usuarioLogado;  
         static public Form _telaAtual;
-
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -36,9 +36,15 @@ namespace project_mencao
             _loginRepo = new LoginRepository();
             _alunosRepo = new AlunosRepository();
             _notasRepo = new NotasRepository();
+            _produtosTela = new ProdutosTela();
             _telaAtual = _registertela;
             Application.Run(_telaAtual);
         }
+
+        /// <summary>
+        /// Simples função que muda a tela para a tela do calculo de media.
+        /// Ela permite que a combobox só seja atualizada quando essa função for chamada
+        /// </summary>
         public static void ir_para_tela_do_calculo_da_media()
         {
             _calcularmediatela.AtualizarCombo = true;

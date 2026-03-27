@@ -32,6 +32,7 @@ C:\Users\chara\source\repos\project_mencao\project_mencao\bin\Debug\System.Numer
 C:\Users\chara\source\repos\project_mencao\project_mencao\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\chara\source\repos\project_mencao\project_mencao\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\chara\source\repos\project_mencao\project_mencao\obj\Debug\project_mencao.csproj.AssemblyReference.cache
+C:\Users\chara\source\repos\project_mencao\project_mencao\obj\Debug\project_mencao.Telas.CadastroDeAluno.resources
 C:\Users\chara\source\repos\project_mencao\project_mencao\obj\Debug\project_mencao.CalcularMediaTela.resources
 C:\Users\chara\source\repos\project_mencao\project_mencao\obj\Debug\project_mencao.LoginTela.resources
 C:\Users\chara\source\repos\project_mencao\project_mencao\obj\Debug\project_mencao.Properties.Resources.resources
@@ -41,4 +42,3 @@ C:\Users\chara\source\repos\project_mencao\project_mencao\obj\Debug\project_menc
 C:\Users\chara\source\repos\project_mencao\project_mencao\obj\Debug\project_.C9E7F377.Up2Date
 C:\Users\chara\source\repos\project_mencao\project_mencao\obj\Debug\project_mencao.exe
 C:\Users\chara\source\repos\project_mencao\project_mencao\obj\Debug\project_mencao.pdb
-C:\Users\chara\source\repos\project_mencao\project_mencao\obj\Debug\project_mencao.Telas.CadastroDeAluno.resources

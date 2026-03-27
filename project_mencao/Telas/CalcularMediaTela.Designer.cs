@@ -31,6 +31,13 @@ namespace project_mencao
         {
             this.label2 = new System.Windows.Forms.Label();
             this.TabelaNotas = new System.Windows.Forms.DataGridView();
+            this.Matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nota1Bim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nota2Bim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nota3Bim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nota4Bim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NotaFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BimCombo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.NotaPlaceHolderLabel = new System.Windows.Forms.Label();
@@ -44,13 +51,8 @@ namespace project_mencao
             this.NotaCompBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.IrParaCadastroAlunoBot = new System.Windows.Forms.Button();
-            this.Matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nota1Bim = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nota2Bim = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nota3Bim = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nota4Bim = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NotaFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeslogButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TabelaNotas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,6 +84,48 @@ namespace project_mencao
             this.TabelaNotas.Size = new System.Drawing.Size(776, 150);
             this.TabelaNotas.TabIndex = 0;
             this.TabelaNotas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Matricula
+            // 
+            this.Matricula.HeaderText = "Matricula";
+            this.Matricula.Name = "Matricula";
+            this.Matricula.ReadOnly = true;
+            // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Nome do Aluno";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            // 
+            // Nota1Bim
+            // 
+            this.Nota1Bim.HeaderText = "1ºBim";
+            this.Nota1Bim.Name = "Nota1Bim";
+            this.Nota1Bim.ReadOnly = true;
+            // 
+            // Nota2Bim
+            // 
+            this.Nota2Bim.HeaderText = "2ºBim";
+            this.Nota2Bim.Name = "Nota2Bim";
+            this.Nota2Bim.ReadOnly = true;
+            // 
+            // Nota3Bim
+            // 
+            this.Nota3Bim.HeaderText = "3ºBim";
+            this.Nota3Bim.Name = "Nota3Bim";
+            this.Nota3Bim.ReadOnly = true;
+            // 
+            // Nota4Bim
+            // 
+            this.Nota4Bim.HeaderText = "4ºBim";
+            this.Nota4Bim.Name = "Nota4Bim";
+            this.Nota4Bim.ReadOnly = true;
+            // 
+            // NotaFinal
+            // 
+            this.NotaFinal.HeaderText = "Nota Final";
+            this.NotaFinal.Name = "NotaFinal";
+            this.NotaFinal.ReadOnly = true;
             // 
             // BimCombo
             // 
@@ -149,7 +193,7 @@ namespace project_mencao
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label5.Location = new System.Drawing.Point(492, 131);
+            this.label5.Location = new System.Drawing.Point(482, 131);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 20);
             this.label5.TabIndex = 0;
@@ -211,61 +255,44 @@ namespace project_mencao
             // 
             // IrParaCadastroAlunoBot
             // 
-            this.IrParaCadastroAlunoBot.Location = new System.Drawing.Point(638, 9);
+            this.IrParaCadastroAlunoBot.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.IrParaCadastroAlunoBot.Location = new System.Drawing.Point(16, 202);
             this.IrParaCadastroAlunoBot.Name = "IrParaCadastroAlunoBot";
-            this.IrParaCadastroAlunoBot.Size = new System.Drawing.Size(150, 38);
+            this.IrParaCadastroAlunoBot.Size = new System.Drawing.Size(229, 42);
             this.IrParaCadastroAlunoBot.TabIndex = 7;
             this.IrParaCadastroAlunoBot.Text = "Cadastrar Novo Aluno";
             this.IrParaCadastroAlunoBot.UseVisualStyleBackColor = true;
             this.IrParaCadastroAlunoBot.Click += new System.EventHandler(this.IrParaCadastroAlunoBot_Click);
             // 
-            // Matricula
+            // DeslogButton
             // 
-            this.Matricula.HeaderText = "Matricula";
-            this.Matricula.Name = "Matricula";
-            this.Matricula.ReadOnly = true;
+            this.DeslogButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.DeslogButton.Location = new System.Drawing.Point(13, 9);
+            this.DeslogButton.Name = "DeslogButton";
+            this.DeslogButton.Size = new System.Drawing.Size(204, 38);
+            this.DeslogButton.TabIndex = 8;
+            this.DeslogButton.Text = "DesLogar";
+            this.DeslogButton.UseVisualStyleBackColor = true;
+            this.DeslogButton.Click += new System.EventHandler(this.DeslogButton_Click);
             // 
-            // Nome
+            // button1
             // 
-            this.Nome.HeaderText = "Nome do Aluno";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            // 
-            // Nota1Bim
-            // 
-            this.Nota1Bim.HeaderText = "1ºBim";
-            this.Nota1Bim.Name = "Nota1Bim";
-            this.Nota1Bim.ReadOnly = true;
-            // 
-            // Nota2Bim
-            // 
-            this.Nota2Bim.HeaderText = "2ºBim";
-            this.Nota2Bim.Name = "Nota2Bim";
-            this.Nota2Bim.ReadOnly = true;
-            // 
-            // Nota3Bim
-            // 
-            this.Nota3Bim.HeaderText = "3ºBim";
-            this.Nota3Bim.Name = "Nota3Bim";
-            this.Nota3Bim.ReadOnly = true;
-            // 
-            // Nota4Bim
-            // 
-            this.Nota4Bim.HeaderText = "4ºBim";
-            this.Nota4Bim.Name = "Nota4Bim";
-            this.Nota4Bim.ReadOnly = true;
-            // 
-            // NotaFinal
-            // 
-            this.NotaFinal.HeaderText = "Nota Final";
-            this.NotaFinal.Name = "NotaFinal";
-            this.NotaFinal.ReadOnly = true;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.button1.Location = new System.Drawing.Point(533, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(255, 38);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Ir para Sistema de Produtos";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CalcularMediaTela
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.DeslogButton);
             this.Controls.Add(this.IrParaCadastroAlunoBot);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.NotaCompBox);
@@ -285,6 +312,7 @@ namespace project_mencao
             this.Text = "CalcularMediaTela";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CalcularMediaTela_FormClosing);
             this.Load += new System.EventHandler(this.CalcularMediaTela_Load);
+            this.Shown += new System.EventHandler(this.CalcularMediaTela_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.TabelaNotas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -314,5 +342,7 @@ namespace project_mencao
         private System.Windows.Forms.DataGridViewTextBoxColumn Nota3Bim;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nota4Bim;
         private System.Windows.Forms.DataGridViewTextBoxColumn NotaFinal;
+        private System.Windows.Forms.Button DeslogButton;
+        private System.Windows.Forms.Button button1;
     }
 }

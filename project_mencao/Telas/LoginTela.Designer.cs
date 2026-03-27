@@ -69,12 +69,13 @@ namespace project_mencao
             // 
             this.SenhaBox.Location = new System.Drawing.Point(281, 192);
             this.SenhaBox.Name = "SenhaBox";
+            this.SenhaBox.PasswordChar = '*';
             this.SenhaBox.Size = new System.Drawing.Size(275, 20);
             this.SenhaBox.TabIndex = 4;
             // 
             // LoginBot
             // 
-            this.LoginBot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.LoginBot.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.LoginBot.Location = new System.Drawing.Point(218, 249);
             this.LoginBot.Name = "LoginBot";
             this.LoginBot.Size = new System.Drawing.Size(338, 51);
@@ -96,7 +97,7 @@ namespace project_mencao
             // 
             // VoltarAoRegistroBot
             // 
-            this.VoltarAoRegistroBot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.VoltarAoRegistroBot.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.VoltarAoRegistroBot.Location = new System.Drawing.Point(218, 306);
             this.VoltarAoRegistroBot.Name = "VoltarAoRegistroBot";
             this.VoltarAoRegistroBot.Size = new System.Drawing.Size(338, 51);

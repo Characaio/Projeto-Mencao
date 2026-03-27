@@ -17,7 +17,10 @@ namespace project_mencao.Telas
             InitializeComponent();
         }
 
-        private void CadastAlunBot_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Essa função extrai os dados da tela do cadastro, valida os dados e, caso estejam corretos, cadastra o aluno
+        /// </summary>
+        private void fazer_cadastro()
         {
             String Nome = NomeBox.Text;
 
@@ -43,13 +46,28 @@ namespace project_mencao.Telas
             if (Erros.Equals(""))
             {
                 Aluno aluno = new Aluno(Nome, turma);
-                Program._alunosRepo.criar_aluno_novo(aluno);
-                MessageBox.Show("Cadastro realizado com sucesso!");
+                Program._alunosRepo.cadastrar_aluno(aluno);
+                MessageBox.Show(
+                    "Cadastro realizado com sucesso!",
+                    "Ação Bem Sucedida",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Asterisk);
             }
             else
             {
-                MessageBox.Show(Erros);
+                MessageBox.Show(
+                    Erros,
+                    "Erro",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
+            NomeBox.Text = null;
+            TurmaCombo.SelectedItem = 0;
+        }
+        private void CadastAlunBot_Click(object sender, EventArgs e)
+        {
+            fazer_cadastro();
+            
         }
 
 
@@ -62,6 +80,21 @@ namespace project_mencao.Telas
         private void CadastroDeAluno_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void TurmaCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CadastroDeAluno_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void CadastroDeAluno_Shown(object sender, EventArgs e)
+        {
+            TurmaCombo.SelectedIndex = 0;
         }
     }
 }

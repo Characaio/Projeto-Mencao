@@ -13,6 +13,7 @@ namespace project_mencao
 {
     public partial class CalcularMediaTela : Form
     {
+        public bool AtualizarCombo = false;
         public CalcularMediaTela()
         {
             InitializeComponent();
@@ -67,8 +68,12 @@ namespace project_mencao
             {"3ºBimestre", Bimestre.Terceiro},
             {"4ºBimestre", Bimestre.Quarto}
         };
-        public bool AtualizarCombo = false;
-        private void PostarButton_Click(object sender, EventArgs e)
+
+        /// <summary>
+        /// Essa função pega os dados do sistema, valida os dados e posta a nota do aluonO.
+        /// Caso não exista essa nota no sistema, ele cria a nota, mas caso exista ele atualiza a nota do aluno.
+        /// </summary>
+        public void postar_nota_do_aluno()
         {
             Object AlunoPuro = AlunoCombo.SelectedItem;
             long AlunoId = -1;
@@ -90,6 +95,36 @@ namespace project_mencao
             bool NotaProvaValida = decimal.TryParse(NotaProvaBox.Text, out decimal NotaProva);
             bool NotaAtivValida = decimal.TryParse(NotaAtivBox.Text, out decimal NotaAtiv);
             bool NotaCompValida = decimal.TryParse(NotaCompBox.Text, out decimal NotaComp);
+            String Erros = "";
+
+            if (NotaProva < 0 || NotaProva > 10 || !NotaProvaValida)
+            {
+                Erros += "Nota de prova Invalida\n";
+            }
+
+            if (NotaAtiv < 0 || NotaAtiv > 10 || !NotaAtivValida)
+            {
+                Erros += "Nota da atividade Invalida\n";
+            }
+
+            if (NotaComp < 0 || NotaComp > 10 || !NotaCompValida)
+            {
+                Erros += "Nota de comportamento Invalida\n";
+
+            }
+
+            NotaAtivBox.Text = null;
+            NotaProvaBox.Text = null;
+            NotaCompBox.Text = null;
+            if (!Erros.Equals(""))
+            {
+                MessageBox.Show(
+                    Erros,
+                    "Erro",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
 
             Nota nota = new Nota(NotaProva, NotaAtiv, NotaComp);
             if (Program._notasRepo.nota_ja_existe(AlunoId, bimestre)){
@@ -105,14 +140,29 @@ namespace project_mencao
                     AlunoId,
                     nota);
             }
+            MessageBox.Show(
+                "Nota Postada",
+                "Ação Bem Sucedida",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Asterisk);
 
             carregar_tabela();
+        }
+        private void PostarButton_Click(object sender, EventArgs e)
+        {
+            postar_nota_do_aluno();
+            
         }
         
         public void atualizar_materia()
         {
             NotaPlaceHolderLabel.Text = "Nota Da Matéria: " + Program._usuarioLogado.getMateriaLecionada();
         }
+
+        /// <summary>
+        /// Pega os dados dos alunos junto com suas notas e coloca na tabela de notas.
+        /// Caso a varaivel AtualizarCombo seja true, ele tambem atualiza a combo, essa checagem existe para previnir que a comboBox seja reiniciada cada vez que postar uma nota
+        /// </summary>
         public void carregar_tabela()
         {
             List<TableDataDTO> resultadoDaTabela = new List<TableDataDTO>();
@@ -186,8 +236,7 @@ namespace project_mencao
                 
             }
             TabelaNotas.Columns.Clear();
-            resultadoDaCombo.Reverse();
-            resultadoDaTabela.Reverse();
+            
             TabelaNotas.DataSource = resultadoDaTabela;
             if (AtualizarCombo)
             {
@@ -210,6 +259,24 @@ namespace project_mencao
         private void CalcularMediaTela_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void CalcularMediaTela_Shown(object sender, EventArgs e)
+        {
+            BimCombo.SelectedIndex = 0;
+        }
+
+        private void DeslogButton_Click(object sender, EventArgs e)
+        {
+            Program._usuarioLogado = null;
+            this.Hide();
+            Program._logintela.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program._produtosTela.Show();
         }
     }
 }

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace project_mencao.Repositories
 {
+    /// <summary>
+    /// <para>Essa clase foi criada para fazer com que a conexão com o banco de dados seja simples</para>
+    /// <para>Ela permite que a conexão seja fácil de mudar caso seja necessário</para>
+    /// </summary>
 
-    /*
-     * Essa clase foi criada para fazer com que a conexão com o banco de dados seja simples
-     * Ela permite que a conexão seja fácil de mudar caso seja necessário
-    */
     internal class DatabaseConnector
     {
         private String ConnectionString = "" +

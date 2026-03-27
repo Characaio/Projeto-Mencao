@@ -1,20 +1,23 @@
-# database ProjetoMencao;
-create database ProjetoMencao;
+drop database ProjetoMencaoCaio;
+create database ProjetoMencaoCaio;
 
-use ProjetoMencao;
+use ProjetoMencaoCaio;
 
 create table Alunos(
 	AlunoId integer primary key auto_increment,
-    nome varchar(255)
+    Nome varchar(255),
+    Turma varchar(4)
+    
 );
 
 create table Notas(
 	NotaId integer primary key auto_increment,
+    AlunoId integer,
+    Bimestre integer,#Bimestre 5 é a nota Final, os outros representam os Bimestres Corretos
     NotaFinal decimal(5,2),
     NotaProva decimal(5,2),
     NotaAtividade decimal(5,2),
     NotaComportamento decimal(5,2),
-    AlunoId integer,
     foreign key (AlunoId) references Alunos(AlunoId)
 );
 
@@ -22,7 +25,7 @@ create table Usuarios(
 	UsuarioId integer primary key auto_increment,
     
     Nome varchar(255),
-    Telefone varchar(11),#(xx) xxxxx-xxxx
+    Telefone varchar(16),#(xx) xxxxx-xxxx
     Email varchar(255),
     Senha varchar(255),
 	MateriaLecionada varchar(255)

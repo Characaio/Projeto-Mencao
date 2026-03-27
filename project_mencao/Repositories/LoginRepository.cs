@@ -9,14 +9,20 @@ using System.Windows.Forms;
 
 namespace project_mencao
 {
+    /// <summary>
+    /// <para>Classe responsavel para conectar o sistema com o banco de dados.</para>
+    /// <para>Ela é responsavel sobre os usuarios.</para>
+    /// <para>Ela cadastra, loga e verifica o usuario</para>
+    /// </summary>
     class LoginRepository
     {
-        static String ConnectionString = "" +
-            "server=localhost;" +
-            "database=projeto_mencao;" +
-            "user=root;" +
-            "password=123456"; //MUDAR A SENHA PARA 123123 PARA ENTREGAR
 
+
+
+        /// <summary>
+        /// <para>Cadastra o usuario com seus dados</para>
+        /// </summary>
+        /// <param name="usuario">Usuario usado para extrair seus dados</param>
         public void cadastrar_usuario(Usuario usuario)
         {
             try
@@ -45,6 +51,11 @@ namespace project_mencao
                 MessageBox.Show("Deu Erro: " + ex.Message);
             }
         }
+        /// <summary>
+        /// <para>Verifica a existencia do usuario</para>
+        /// </summary>
+        /// <param name="usuario">Usuario usada para extrair informações</param>
+        /// <returns></returns>
         public bool usuario_existe(Usuario usuario)
         {
             using (var conn = new DatabaseConnector().GetConnection())
@@ -68,6 +79,11 @@ namespace project_mencao
 
         }
 
+        /// <summary>
+        /// <para>Essa função pega o usuario com base em seu Email e Senha</para>
+        /// </summary>
+        /// <param name="usuario">Usuario usado para extrair o email e senha</param>
+        /// <returns></returns>
         public Usuario pegar_usuario(Usuario usuario)
         {
             using (var conn = new DatabaseConnector().GetConnection())

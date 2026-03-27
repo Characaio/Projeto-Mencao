@@ -7,10 +7,21 @@ using System.Threading.Tasks;
 
 namespace project_mencao.Repositories
 {
+    /// <summary>
+    /// <para>Classe responsavel para cuidar da conexão entre o sistema e o banco de dados.</para>
+    /// <para>Ela é responsavel de cuidar das notas dos alunos.</para>
+    /// <para>Ela posta, atualiza,verifica existencia e pega as notas dos alunos.</para>
+    /// </summary>
     internal class NotasRepository
     {
 
-        public void postar_nota(Bimestre bimestre, long alunoId, Nota nota)
+        /// <summary>
+        /// <para>Posta a nota com base em seu Bimestre, Id do aluno e a nota</para>
+        /// </summary>
+        /// <param name="bimestre">Bimestre atual, o bimestre 5 representa o bimestre final</param>
+        /// <param name="Matricula">Id do aluno</param>
+        /// <param name="nota">Nota para ser postada</param>
+        public void postar_nota(Bimestre bimestre, long Matricula, Nota nota)
         {
 
             using (var conn = new DatabaseConnector().GetConnection())
@@ -24,7 +35,7 @@ namespace project_mencao.Repositories
                     cmd.Parameters.AddWithValue("@NotaProva", nota.getNotaProva());
                     cmd.Parameters.AddWithValue("@NotaAtividade", nota.getNotaAtividade());
                     cmd.Parameters.AddWithValue("@NotaComportamento", nota.getNotaComportamento());
-                    cmd.Parameters.AddWithValue("@AlunoId", alunoId);
+                    cmd.Parameters.AddWithValue("@AlunoId", Matricula);
                     cmd.Parameters.AddWithValue("@Bimestre", bimestre);
 
                     cmd.ExecuteNonQuery();
@@ -32,6 +43,12 @@ namespace project_mencao.Repositories
             }
         }
 
+        /// <summary>
+        /// <para>Verifica a existencia de uma nota puxando as notas que bate com o Id do aluno e bimestre selecionado</para>
+        /// </summary>
+        /// <param name="Matricula">Id do aluno</param>
+        /// <param name="bimestre"></param>
+        /// <returns></returns>
         public bool nota_ja_existe(long Matricula, Bimestre bimestre)
         {
             using (var conn = new DatabaseConnector().GetConnection())
@@ -52,7 +69,13 @@ namespace project_mencao.Repositories
             return false;
         }
 
-        public void atualizar_nota(Bimestre bimestre,long Alunoid, Nota nota)
+        /// <summary>
+        /// <para>Atualiza os dados da nota, essa função sobreescreve a nota que estava la</para>
+        /// </summary>
+        /// <param name="bimestre">Bimestre usada para atualizar a nota, o bimestre 5 é a nota final</param>
+        /// <param name="Matricula">Id do Aluno</param>
+        /// <param name="nota">Nota do bimestre</param>
+        public void atualizar_nota(Bimestre bimestre,long Matricula, Nota nota)
         {
             using (var conn = new DatabaseConnector().GetConnection())
             {
@@ -69,12 +92,17 @@ namespace project_mencao.Repositories
                     cmd.Parameters.AddWithValue("@NotaProva", nota.getNotaProva());
                     cmd.Parameters.AddWithValue("@NotaAtividade", nota.getNotaAtividade());
                     cmd.Parameters.AddWithValue("@NotaComportamento", nota.getNotaComportamento());
-                    cmd.Parameters.AddWithValue("@AlunoId", Alunoid);
+                    cmd.Parameters.AddWithValue("@AlunoId", Matricula);
                     cmd.Parameters.AddWithValue("@Bimestre", bimestre);
                     cmd.ExecuteNonQuery();
                 }
             }
         }
+        /// <summary>
+        /// <para>Pega as notas de todos os bimestres do aluno</para>
+        /// </summary>
+        /// <param name="aluno">Aluno usado para extair sua matricula</param>
+        /// <returns>Lista com todas as notas do aluno</returns>
         public List<Nota> pegar_notas_aluno(Aluno aluno)
         {
             List<Nota> notas = new List<Nota>();
