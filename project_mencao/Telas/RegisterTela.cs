@@ -1,4 +1,6 @@
 ﻿using project_mencao.Models;
+using project_mencao.Telas;
+using project_mencao.Utilidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -60,18 +62,18 @@ namespace project_mencao
                 Program._loginRepo.cadastrar_usuario(usuario);
                 Program._usuarioLogado = usuario;
                 MessageBox.Show(
-                    "Cadastro realizado com sucesso!",
-                    "Ação Bem Sucedida",
+                    AcaoResposta.CadastroSucesso,
+                    AcaoResposta.Sucesso,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Asterisk);
                 this.Hide();
-                Program.ir_para_tela_do_calculo_da_media();
+                Program._hubtela.Show();
             }
             else
             {
                 MessageBox.Show(
                     Erros,
-                    "Erro",
+                    AcaoResposta.Erro,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
                     );

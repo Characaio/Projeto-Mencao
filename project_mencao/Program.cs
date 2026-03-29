@@ -15,10 +15,18 @@ namespace project_mencao
         static public RegisterTela _registertela;
         static public CalcularMediaTela _calcularmediatela;
         static public CadastroDeAluno _cadastrodealuno;
+        static public ComprarProdutosTela _compraprodutostela;
+        static public HubTela _hubtela;
+        static public CadastroProdutosTela _cadastroprodutostela;
+        static public HistoricoProdutoTela _historicoprodutostela;
+        
+
         static public LoginRepository _loginRepo;
         static public AlunosRepository _alunosRepo;
         static public NotasRepository _notasRepo;
-        static public ProdutosTela _produtosTela;
+        static public ProdutosRepository _produtosRepo;
+        static public PedidosRepository _pedidosrepo;
+
         static public Usuario _usuarioLogado;  
         static public Form _telaAtual;
         /// <summary>
@@ -33,10 +41,19 @@ namespace project_mencao
             _registertela = new RegisterTela();
             _calcularmediatela = new CalcularMediaTela();
             _cadastrodealuno = new CadastroDeAluno();
+            _hubtela = new HubTela();
+            _compraprodutostela = new ComprarProdutosTela();
+            _cadastroprodutostela = new CadastroProdutosTela();
+            _historicoprodutostela = new HistoricoProdutoTela();
+
+
             _loginRepo = new LoginRepository();
             _alunosRepo = new AlunosRepository();
             _notasRepo = new NotasRepository();
-            _produtosTela = new ProdutosTela();
+            _produtosRepo = new ProdutosRepository();
+            _pedidosrepo = new PedidosRepository();
+
+
             _telaAtual = _registertela;
             Application.Run(_telaAtual);
         }

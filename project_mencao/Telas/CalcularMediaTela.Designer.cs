@@ -51,8 +51,7 @@ namespace project_mencao
             this.NotaCompBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.IrParaCadastroAlunoBot = new System.Windows.Forms.Button();
-            this.DeslogButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.VoltarAoHubBot = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TabelaNotas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,7 +82,6 @@ namespace project_mencao
             this.TabelaNotas.ReadOnly = true;
             this.TabelaNotas.Size = new System.Drawing.Size(776, 150);
             this.TabelaNotas.TabIndex = 0;
-            this.TabelaNotas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Matricula
             // 
@@ -140,7 +138,6 @@ namespace project_mencao
             this.BimCombo.Name = "BimCombo";
             this.BimCombo.Size = new System.Drawing.Size(150, 21);
             this.BimCombo.TabIndex = 2;
-            this.BimCombo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -171,7 +168,6 @@ namespace project_mencao
             this.label4.Size = new System.Drawing.Size(115, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "Nota de Prova";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // NotaProvaBox
             // 
@@ -179,7 +175,6 @@ namespace project_mencao
             this.NotaProvaBox.Name = "NotaProvaBox";
             this.NotaProvaBox.Size = new System.Drawing.Size(150, 20);
             this.NotaProvaBox.TabIndex = 3;
-            this.NotaProvaBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // NotaAtivBox
             // 
@@ -187,7 +182,6 @@ namespace project_mencao
             this.NotaAtivBox.Name = "NotaAtivBox";
             this.NotaAtivBox.Size = new System.Drawing.Size(150, 20);
             this.NotaAtivBox.TabIndex = 4;
-            this.NotaAtivBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label5
             // 
@@ -198,7 +192,6 @@ namespace project_mencao
             this.label5.Size = new System.Drawing.Size(140, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "Nota de Atividade";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // PostarButton
             // 
@@ -240,7 +233,6 @@ namespace project_mencao
             this.NotaCompBox.Name = "NotaCompBox";
             this.NotaCompBox.Size = new System.Drawing.Size(150, 20);
             this.NotaCompBox.TabIndex = 5;
-            this.NotaCompBox.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label7
             // 
@@ -251,7 +243,6 @@ namespace project_mencao
             this.label7.Size = new System.Drawing.Size(191, 20);
             this.label7.TabIndex = 0;
             this.label7.Text = "Nota de Comportamento";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // IrParaCadastroAlunoBot
             // 
@@ -264,35 +255,23 @@ namespace project_mencao
             this.IrParaCadastroAlunoBot.UseVisualStyleBackColor = true;
             this.IrParaCadastroAlunoBot.Click += new System.EventHandler(this.IrParaCadastroAlunoBot_Click);
             // 
-            // DeslogButton
+            // VoltarAoHubBot
             // 
-            this.DeslogButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.DeslogButton.Location = new System.Drawing.Point(13, 9);
-            this.DeslogButton.Name = "DeslogButton";
-            this.DeslogButton.Size = new System.Drawing.Size(204, 38);
-            this.DeslogButton.TabIndex = 8;
-            this.DeslogButton.Text = "DesLogar";
-            this.DeslogButton.UseVisualStyleBackColor = true;
-            this.DeslogButton.Click += new System.EventHandler(this.DeslogButton_Click);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.button1.Location = new System.Drawing.Point(533, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(255, 38);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Ir para Sistema de Produtos";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.VoltarAoHubBot.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.VoltarAoHubBot.Location = new System.Drawing.Point(8, 12);
+            this.VoltarAoHubBot.Name = "VoltarAoHubBot";
+            this.VoltarAoHubBot.Size = new System.Drawing.Size(255, 38);
+            this.VoltarAoHubBot.TabIndex = 9;
+            this.VoltarAoHubBot.Text = "Voltar para a Tela Principal";
+            this.VoltarAoHubBot.UseVisualStyleBackColor = true;
+            this.VoltarAoHubBot.Click += new System.EventHandler(this.VoltarAoHubBot_Click);
             // 
             // CalcularMediaTela
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.DeslogButton);
+            this.Controls.Add(this.VoltarAoHubBot);
             this.Controls.Add(this.IrParaCadastroAlunoBot);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.NotaCompBox);
@@ -311,7 +290,6 @@ namespace project_mencao
             this.Name = "CalcularMediaTela";
             this.Text = "CalcularMediaTela";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CalcularMediaTela_FormClosing);
-            this.Load += new System.EventHandler(this.CalcularMediaTela_Load);
             this.Shown += new System.EventHandler(this.CalcularMediaTela_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.TabelaNotas)).EndInit();
             this.ResumeLayout(false);
@@ -342,7 +320,6 @@ namespace project_mencao
         private System.Windows.Forms.DataGridViewTextBoxColumn Nota3Bim;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nota4Bim;
         private System.Windows.Forms.DataGridViewTextBoxColumn NotaFinal;
-        private System.Windows.Forms.Button DeslogButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button VoltarAoHubBot;
     }
 }

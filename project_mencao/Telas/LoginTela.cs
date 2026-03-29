@@ -1,4 +1,5 @@
 ﻿using project_mencao.Models;
+using project_mencao.Utilidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,20 +45,24 @@ namespace project_mencao
                 Usuario usuario = new Usuario(Email, Senha);
                 if (Program._loginRepo.usuario_existe(usuario))
                 {
+
                     Program._usuarioLogado = Program._loginRepo.pegar_usuario(usuario);
                     MessageBox.Show(
-                        "Login realizado com sucesso!",
-                        "Ação Bem Sucedida",
+                        AcaoResposta.LoginSucesso,
+                        AcaoResposta.Sucesso,
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Asterisk);
+
                     this.Hide();
-                    Program.ir_para_tela_do_calculo_da_media();
+                    Program._hubtela.Show();
+                    EmailBox.Text = "";
+                    SenhaBox.Text = "";
                 }
                 else
                 {
                     MessageBox.Show(
-                        "Email ou senha incorretos.",
-                        "Erro",
+                        AcaoResposta.EmailSenhaErro,
+                        AcaoResposta.Erro,
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error
                     );
@@ -67,7 +72,7 @@ namespace project_mencao
             {
                 MessageBox.Show(
                     Erros,
-                    "Erro",
+                    AcaoResposta.Erro,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }

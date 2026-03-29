@@ -42,3 +42,9 @@ C:\Users\chara\source\repos\project_mencao\project_mencao\obj\Debug\project_menc
 C:\Users\chara\source\repos\project_mencao\project_mencao\obj\Debug\project_.C9E7F377.Up2Date
 C:\Users\chara\source\repos\project_mencao\project_mencao\obj\Debug\project_mencao.exe
 C:\Users\chara\source\repos\project_mencao\project_mencao\obj\Debug\project_mencao.pdb
+C:\Users\chara\source\repos\project_mencao\project_mencao\obj\Debug\project_mencao.Telas.ComprarProdutosTela.resources
+C:\Users\chara\source\repos\project_mencao\project_mencao\obj\Debug\project_mencao.Telas.HubTela.resources
+C:\Users\chara\source\repos\project_mencao\project_mencao\obj\Debug\project_mencao.Telas.CadastroProdutosTela.resources
+C:\Users\chara\source\repos\project_mencao\project_mencao\obj\Debug\project_mencao.Telas.HistoricoProdutoTela.resources
+C:\Users\chara\source\repos\project_mencao\project_mencao\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\chara\source\repos\project_mencao\project_mencao\bin\Debug\BCrypt.Net-Next.xml

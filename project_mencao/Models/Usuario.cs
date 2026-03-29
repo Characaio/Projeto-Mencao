@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using BCrypt.Net;
+using Org.BouncyCastle.Crypto.Generators;
 namespace project_mencao.Models
 {
     /// <summary>
@@ -12,6 +13,7 @@ namespace project_mencao.Models
     /// </summary>
     internal class Usuario
     {
+        static private String Salt = "ProjectMencaoCaio";
         private String Nome { get; set; }
         private String Telefone { get; set; }
         private String Email { get; set; }
@@ -34,7 +36,8 @@ namespace project_mencao.Models
 
         private String converter_para_hash(String Senha)
         {
-            return Senha.GetHashCode().ToString();
+            return Senha;
+            //return BCrypt.Net.BCrypt.HashPassword(Senha);
         }
         public String getNome() { return Nome; }
         public String getTelefone() {return Telefone;}

@@ -30,3 +30,23 @@ create table Usuarios(
     Senha varchar(255),
 	MateriaLecionada varchar(255)
 );
+
+create table Produtos(
+	ProdutoId integer primary key auto_increment,
+    Nome varchar(255),
+    Valor decimal (10,2),
+    Descricao text,
+    Tipo varchar(255),
+    Marca varchar(255)
+);
+
+create table Pedidos(
+	PedidoId integer primary key auto_increment,
+    UsuarioId integer,
+    ProdutoId integer,
+    ValorDaCompra decimal(10,2),
+    Quantidade integer,
+    DataDaCompra timestamp default current_timestamp,
+    foreign key (UsuarioId) references Usuarios(UsuarioId),
+    foreign key (ProdutoId) references Produtos(ProdutoId)
+);

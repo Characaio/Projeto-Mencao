@@ -1,4 +1,5 @@
-﻿using System;
+﻿using project_mencao.Utilidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -48,8 +49,8 @@ namespace project_mencao.Telas
                 Aluno aluno = new Aluno(Nome, turma);
                 Program._alunosRepo.cadastrar_aluno(aluno);
                 MessageBox.Show(
-                    "Cadastro realizado com sucesso!",
-                    "Ação Bem Sucedida",
+                    AcaoResposta.AlunoCriado,
+                    AcaoResposta.Sucesso,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Asterisk);
             }
@@ -57,7 +58,7 @@ namespace project_mencao.Telas
             {
                 MessageBox.Show(
                     Erros,
-                    "Erro",
+                    AcaoResposta.Erro,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }

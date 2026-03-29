@@ -110,5 +110,48 @@ namespace project_mencao
                 }
             }
         }
+
+        public String pegar_nome_do_usuario(long UsuarioId)
+        {
+            using (var conn = new DatabaseConnector().GetConnection())
+            {
+                conn.Open();
+                String query = "SELECT Nome FROM usuarios WHERE UsuarioId = @UsuarioId";
+                using (var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@UsuarioId", UsuarioId);
+                    var reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        return reader["Nome"].ToString();
+                    }
+                }
+            }
+            return null;
+        }
+
+        public long pegar_id_do_usuario(Usuario usuario)
+        {
+
+            using (var conn = new DatabaseConnector().GetConnection())
+            {
+                conn.Open();
+                String query = "SELECT * FROM usuarios WHERE Email = @Email AND Senha = @Senha";
+                using (var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Email", usuario.getEmail());
+                    cmd.Parameters.AddWithValue("@Senha", usuario.getSenha());
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            long _ = reader.GetInt64("UsuarioId");
+                            return _;
+                        }
+                    }
+                }
+            }
+            return -1;
+        }
     }
 }

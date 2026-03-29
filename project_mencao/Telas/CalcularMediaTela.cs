@@ -1,4 +1,5 @@
 ﻿using project_mencao.Models;
+using project_mencao.Utilidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,48 +19,6 @@ namespace project_mencao
         {
             InitializeComponent();
         }
-
-        private void CalcularMediaTela_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-        
-
 
 
         private Dictionary<String, Bimestre> BimStrParaBimEnum = new Dictionary<String, Bimestre> {
@@ -120,7 +79,7 @@ namespace project_mencao
             {
                 MessageBox.Show(
                     Erros,
-                    "Erro",
+                    AcaoResposta.Erro,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
                 return;
@@ -132,6 +91,11 @@ namespace project_mencao
                     bimestre,
                     AlunoId,
                     nota);
+                MessageBox.Show(
+                    AcaoResposta.NotaAtualizada,
+                    AcaoResposta.Sucesso,
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Asterisk);
             }
             else
             {
@@ -139,12 +103,12 @@ namespace project_mencao
                     bimestre,
                     AlunoId,
                     nota);
+                MessageBox.Show(
+                    AcaoResposta.NotaPostada,
+                    AcaoResposta.Sucesso,
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Asterisk);
             }
-            MessageBox.Show(
-                "Nota Postada",
-                "Ação Bem Sucedida",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Asterisk);
 
             carregar_tabela();
         }
@@ -165,13 +129,13 @@ namespace project_mencao
         /// </summary>
         public void carregar_tabela()
         {
-            List<TableDataDTO> resultadoDaTabela = new List<TableDataDTO>();
+            List<TableDataNotasDTO> resultadoDaTabela = new List<TableDataNotasDTO>();
             List<String> resultadoDaCombo = new List<String>();
             List<Aluno> alunos = Program._alunosRepo.pegar_alunos();
 
             foreach (Aluno aluno in alunos)
             {
-                TableDataDTO linha = new TableDataDTO();
+                TableDataNotasDTO linha = new TableDataNotasDTO();
                 linha.Matricula = aluno.getMatricula();
                 linha.Nome = aluno.getNome();
                 List<Nota> notas = Program._notasRepo.pegar_notas_aluno(aluno);
@@ -251,10 +215,7 @@ namespace project_mencao
             Program._cadastrodealuno.Show();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
 
         private void CalcularMediaTela_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -266,17 +227,13 @@ namespace project_mencao
             BimCombo.SelectedIndex = 0;
         }
 
-        private void DeslogButton_Click(object sender, EventArgs e)
-        {
-            Program._usuarioLogado = null;
-            this.Hide();
-            Program._logintela.Show();
-        }
+        
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void VoltarAoHubBot_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program._produtosTela.Show();
+            Program._hubtela.Show();
         }
     }
 }
