@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace project_mencao.Models
 {
+    /// <summary>
+    /// <para>Classe que representa as informações do Hisotrico de Notas.</para>
+    /// <para>Ela serve apenas para transportar informações dada para ela, ela não tem nenhuma função alem disso.</para>
+    /// </summary>
     internal class TabelaDePedidosDTO
     {
 

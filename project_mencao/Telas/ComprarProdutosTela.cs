@@ -14,7 +14,9 @@ namespace project_mencao.Telas
 {
     public partial class ComprarProdutosTela : Form
     {
-
+        /// <summary>
+        /// Dicionario para converter Estado Para Frete
+        /// </summary>
         static Dictionary<String,decimal> ValoresDoFrete = new Dictionary<String, decimal>()
         {
             {"SP", 3},
@@ -39,7 +41,7 @@ namespace project_mencao.Telas
 
         private void CarregarProdutoBot_Click(object sender, EventArgs e)
         {
-            carregar_dados_do_produto();
+            
         }
 
         public void carregar_dados_do_produto()
@@ -232,8 +234,8 @@ namespace project_mencao.Telas
             MarcaBox.Text = "";
             TipoBox.Text = "";
             PainelDeCompra.Hide();
-            EstadoComboBox.SelectedIndex = 0;
-            ProdutoSelecionadoCombo.SelectedIndex = 0;
+            EstadoComboBox.SelectedIndex = 1;
+            ProdutoSelecionadoCombo.SelectedIndex = 1;
         }
 
         private void ComprarProdutosTela_VisibleChanged(object sender, EventArgs e)

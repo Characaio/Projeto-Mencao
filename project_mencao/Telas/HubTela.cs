@@ -27,7 +27,6 @@ namespace project_mencao.Telas
         private void IrParaCompraDeProdutos_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program._compraprodutostela.limpar_dados();
             Program._compraprodutostela.Show();
             
         }

@@ -7,9 +7,17 @@ using System.Threading.Tasks;
 
 namespace project_mencao.Repositories
 {
+    /// <summary>
+    /// <para>Classe responsavel para conectar o sistema com o banco de dados.</para>
+    /// <para>Ela é responsavel sobre os Produtos.</para>
+    /// <para>Ela cadastra, carrega, pega nome, lista os produtos e cria os produtos base</para>
+    /// </summary>
     internal class ProdutosRepository
     {
-
+        /// <summary>
+        /// Cadastra um produto com base nos dados entregue
+        /// </summary>
+        /// <param name="produto">Dados para ser colocado ao banco de dados</param>
         public void cadastrar_produto(Produto produto)
         {
             using (var conn = new DatabaseConnector().GetConnection())
@@ -28,7 +36,11 @@ namespace project_mencao.Repositories
                 }
             }
         }
-
+        /// <summary>
+        /// Carrega produto os dados do produto com base no Id
+        /// </summary>
+        /// <param name="ProdutoId">Id do produto</param>
+        /// <returns></returns>
         public Produto carregar_produto(long ProdutoId)
         {
             Produto produto = null;
@@ -59,6 +71,11 @@ namespace project_mencao.Repositories
             return produto;
         }
 
+        /// <summary>
+        /// Pega o nome do produto com base no Id dele
+        /// </summary>
+        /// <param name="ProdutoId">Id do produto</param>
+        /// <returns></returns>
         public String pegar_nome_do_produto(long ProdutoId)
         {
 
@@ -81,6 +98,10 @@ namespace project_mencao.Repositories
             return null;
         }
 
+        /// <summary>
+        /// Lista todos os produtos retornando com o Id e Nome
+        /// </summary>
+        /// <returns>Formato da resposta: {ID-NOME}</returns>
         public List<String> listar_produtos()
         {
             List<String> produtos = new List<String>();
@@ -109,6 +130,9 @@ namespace project_mencao.Repositories
             return produtos;
         }
 
+        /// <summary>
+        /// Cria um produto de exemplo para o sistema começar levemente populado
+        /// </summary>
         public void criar_produto_base()
         {
             using (var conn = new DatabaseConnector().GetConnection())
@@ -127,6 +151,11 @@ namespace project_mencao.Repositories
                 }
             }
         }
+
+        /// <summary>
+        /// Verifica se os valores base existe
+        /// </summary>
+        /// <returns>Resposta</returns>
         public bool valores_base_existem()
         {
             using (var conn = new DatabaseConnector().GetConnection())

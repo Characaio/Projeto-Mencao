@@ -9,7 +9,7 @@ namespace project_mencao.Repositories
 {
 
     /// <summary>
-    /// <para>Classe Responsavel para cuidar da conexão entre o sistema e o banco de dados. </para>
+    /// <para>Classe responsavel para conectar o sistema com o banco de dados.</para>
     /// <para>Ela serve para cuidar dos alunos.</para>
     /// <para>Ela cadastra, pega todos os alunos e pega um aluno com base em seu ID</para>
     /// </summary>

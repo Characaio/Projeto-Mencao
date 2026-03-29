@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace project_mencao.Repositories
 {
     /// <summary>
-    /// <para>Classe responsavel para cuidar da conexão entre o sistema e o banco de dados.</para>
+    /// <para>Classe responsavel para conectar o sistema com o banco de dados.</para>
     /// <para>Ela é responsavel de cuidar das notas dos alunos.</para>
     /// <para>Ela posta, atualiza,verifica existencia e pega as notas dos alunos.</para>
     /// </summary>

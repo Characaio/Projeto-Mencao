@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace project_mencao.Models
 {
+    /// <summary>
+    /// <para>Classe que representa a entidade Produtos</para>
+    /// <para>Transfere para transferir informações sobre o produto</para>
+    /// </summary>
     internal class Produto
     {
 

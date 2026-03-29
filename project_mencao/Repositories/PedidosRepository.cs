@@ -8,9 +8,21 @@ using System.Windows.Forms;
 
 namespace project_mencao.Repositories
 {
+    /// <summary>
+    /// <para>Classe responsavel para conectar o sistema com o banco de dados.</para>
+    /// <para>Ela é responsavel sobre os Pedidos dos clientes.</para>
+    /// <para>Ele cria o pedido, lista os pedidos com base no Id do usuario</para>
+    /// </summary>
     internal class PedidosRepository
     {
 
+        /// <summary>
+        /// Cria um pedido Com base nas informações dadas
+        /// </summary>
+        /// <param name="UsuarioId">Id do usuario, FK</param>
+        /// <param name="ProdutoId">Id do usuario, FK</param>
+        /// <param name="ValorDaCompra">Valor total da compra</param>
+        /// <param name="QuantidadeComprada">Quantidade Comprada</param>
         public void criar_pedido(long UsuarioId, long ProdutoId,decimal ValorDaCompra,int QuantidadeComprada)
         {
             using (var conn = new DatabaseConnector().GetConnection())
@@ -30,7 +42,11 @@ namespace project_mencao.Repositories
         }
 
 
-
+        /// <summary>
+        /// Lista todos os pedidos com base no id do usuario
+        /// </summary>
+        /// <param name="UsuarioId">Id do Usuario Atual</param>
+        /// <returns>Lista com todos os pedidos recolhidos</returns>
         public List<Pedido> listar_pedidos(long UsuarioId)
         {
             List<Pedido> pedidos = new List<Pedido>();
@@ -63,12 +79,6 @@ namespace project_mencao.Repositories
             return pedidos;
         }
 
-        public Pedido carregar_pedido()
-        {
-            Pedido pedido = new Pedido();
-
-            return pedido;
-        }
 
     }
 }

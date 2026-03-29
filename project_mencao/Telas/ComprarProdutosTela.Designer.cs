@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.CarregarProdutoBot = new System.Windows.Forms.Button();
             this.ProdutoSelecionadoCombo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -70,23 +69,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Produtos";
             // 
-            // CarregarProdutoBot
-            // 
-            this.CarregarProdutoBot.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.CarregarProdutoBot.Location = new System.Drawing.Point(16, 125);
-            this.CarregarProdutoBot.Name = "CarregarProdutoBot";
-            this.CarregarProdutoBot.Size = new System.Drawing.Size(321, 37);
-            this.CarregarProdutoBot.TabIndex = 1;
-            this.CarregarProdutoBot.Text = "Carregar Produto";
-            this.CarregarProdutoBot.UseVisualStyleBackColor = true;
-            this.CarregarProdutoBot.Click += new System.EventHandler(this.CarregarProdutoBot_Click);
-            // 
             // ProdutoSelecionadoCombo
             // 
             this.ProdutoSelecionadoCombo.FormattingEnabled = true;
-            this.ProdutoSelecionadoCombo.Location = new System.Drawing.Point(181, 84);
+            this.ProdutoSelecionadoCombo.Location = new System.Drawing.Point(23, 116);
             this.ProdutoSelecionadoCombo.Name = "ProdutoSelecionadoCombo";
-            this.ProdutoSelecionadoCombo.Size = new System.Drawing.Size(156, 21);
+            this.ProdutoSelecionadoCombo.Size = new System.Drawing.Size(241, 21);
             this.ProdutoSelecionadoCombo.TabIndex = 2;
             this.ProdutoSelecionadoCombo.SelectedIndexChanged += new System.EventHandler(this.ProdutoSelecionadoCombo_SelectedIndexChanged);
             // 
@@ -94,7 +82,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label2.Location = new System.Drawing.Point(12, 85);
+            this.label2.Location = new System.Drawing.Point(56, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(163, 20);
             this.label2.TabIndex = 3;
@@ -400,7 +388,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ProdutoSelecionadoCombo);
-            this.Controls.Add(this.CarregarProdutoBot);
             this.Controls.Add(this.label1);
             this.Name = "ComprarProdutosTela";
             this.Text = "Produtos";
@@ -418,7 +405,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button CarregarProdutoBot;
         private System.Windows.Forms.ComboBox ProdutoSelecionadoCombo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

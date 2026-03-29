@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace project_mencao.Utilidades
 {
+    /// <summary>
+    /// Classe com constantes para representar respostas de uma MessageBox, facilitando a leitura e modificação de codigo
+    /// </summary>
     internal class AcaoResposta
     {
         public static String Erro = "Erro";
