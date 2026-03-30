@@ -1,4 +1,5 @@
-﻿using project_mencao.Utilidades;
+﻿using project_mencao.DTOs;
+using project_mencao.Utilidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,31 +24,16 @@ namespace project_mencao.Telas
         /// </summary>
         private void fazer_cadastro()
         {
-            String Nome = NomeBox.Text;
 
-            Object turmaPura = TurmaCombo.SelectedItem;
-            String turma = "";
 
-            String Erros = "";
-
-            if (String.IsNullOrWhiteSpace(Nome))
-            {
-                Erros += "O campo nome é obrigatório.\n";
-            }
-
-            if (turmaPura != null)
-            {
-                turma = turmaPura.ToString();
-            }
-            else
-            {
-                Erros += "O campo turma é obrigatório.\n";
-            }
+            String Erros = Program._alunoservice.cadastrar_aluno(
+                new AlunoDTO(
+                    NomeBox.Text,
+                    TurmaCombo.SelectedItem.ToString()
+                ));
 
             if (Erros.Equals(""))
             {
-                Aluno aluno = new Aluno(Nome, turma);
-                Program._alunosRepo.cadastrar_aluno(aluno);
                 MessageBox.Show(
                     AcaoResposta.AlunoCriado,
                     AcaoResposta.Sucesso,

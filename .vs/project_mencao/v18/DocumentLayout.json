@@ -3,52 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\chara\\source\\repos\\project_mencao\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|c:\\users\\chara\\source\\repos\\project_mencao\\project_mencao\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|solutionrelative:project_mencao\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|c:\\users\\chara\\source\\repos\\project_mencao\\project_mencao\\services\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|solutionrelative:project_mencao\\services\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|c:\\users\\chara\\source\\repos\\project_mencao\\project_mencao\\models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|solutionrelative:project_mencao\\models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|c:\\users\\chara\\source\\repos\\project_mencao\\project_mencao\\telas\\historicoprodutotela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|solutionrelative:project_mencao\\telas\\historicoprodutotela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|c:\\users\\chara\\source\\repos\\project_mencao\\project_mencao\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|solutionrelative:project_mencao\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|c:\\users\\chara\\source\\repos\\project_mencao\\project_mencao\\telas\\comprarprodutostela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|solutionrelative:project_mencao\\telas\\comprarprodutostela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|c:\\users\\chara\\source\\repos\\project_mencao\\project_mencao\\models\\tabledatanotasdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|solutionrelative:project_mencao\\models\\tabledatanotasdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|c:\\users\\chara\\source\\repos\\project_mencao\\project_mencao\\telas\\comprarprodutostela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|solutionrelative:project_mencao\\telas\\comprarprodutostela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|c:\\users\\chara\\source\\repos\\project_mencao\\project_mencao\\models\\tabeladepedidosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|solutionrelative:project_mencao\\models\\tabeladepedidosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|c:\\users\\chara\\source\\repos\\project_mencao\\project_mencao\\telas\\cadastroprodutostela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|solutionrelative:project_mencao\\telas\\cadastroprodutostela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|c:\\users\\chara\\source\\repos\\project_mencao\\project_mencao\\repositories\\pedidosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|solutionrelative:project_mencao\\repositories\\pedidosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|c:\\users\\chara\\source\\repos\\project_mencao\\project_mencao\\repositories\\produtosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|solutionrelative:project_mencao\\repositories\\produtosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|c:\\users\\chara\\source\\repos\\project_mencao\\project_mencao\\utilidades\\acaoresposta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|solutionrelative:project_mencao\\utilidades\\acaoresposta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|c:\\users\\chara\\source\\repos\\project_mencao\\project_mencao\\repositories\\notasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|solutionrelative:project_mencao\\repositories\\notasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|c:\\users\\chara\\source\\repos\\project_mencao\\project_mencao\\repositories\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|solutionrelative:project_mencao\\repositories\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|c:\\users\\chara\\source\\repos\\project_mencao\\project_mencao\\repositories\\alunosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|solutionrelative:project_mencao\\repositories\\alunosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|c:\\users\\chara\\source\\repos\\project_mencao\\project_mencao\\utilidades\\bimestre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|solutionrelative:project_mencao\\utilidades\\bimestre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|c:\\users\\chara\\source\\repos\\project_mencao\\project_mencao\\telas\\historicoprodutotela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FA16032A-CCAE-421C-BB4A-39A2A5D72077}|project_mencao\\project_mencao.csproj|solutionrelative:project_mencao\\telas\\historicoprodutotela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,163 +34,82 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "project_mencao\\Models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Models\\Usuario.cs",
-              "RelativeToolTip": "project_mencao\\Models\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ProdutoService.cs",
+              "DocumentMoniker": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Services\\ProdutoService.cs",
+              "RelativeDocumentMoniker": "project_mencao\\Services\\ProdutoService.cs",
+              "ToolTip": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Services\\ProdutoService.cs",
+              "RelativeToolTip": "project_mencao\\Services\\ProdutoService.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAIwE4AAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T23:22:45.789Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "NotasRepository.cs",
-              "DocumentMoniker": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Repositories\\NotasRepository.cs",
-              "RelativeDocumentMoniker": "project_mencao\\Repositories\\NotasRepository.cs",
-              "ToolTip": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Repositories\\NotasRepository.cs",
-              "RelativeToolTip": "project_mencao\\Repositories\\NotasRepository.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAgwBEAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T22:56:07.309Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AlunosRepository.cs",
-              "DocumentMoniker": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Repositories\\AlunosRepository.cs",
-              "RelativeDocumentMoniker": "project_mencao\\Repositories\\AlunosRepository.cs",
-              "ToolTip": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Repositories\\AlunosRepository.cs",
-              "RelativeToolTip": "project_mencao\\Repositories\\AlunosRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T22:55:28.48Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "LoginRepository.cs",
-              "DocumentMoniker": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Repositories\\LoginRepository.cs",
-              "RelativeDocumentMoniker": "project_mencao\\Repositories\\LoginRepository.cs",
-              "ToolTip": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Repositories\\LoginRepository.cs",
-              "RelativeToolTip": "project_mencao\\Repositories\\LoginRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T22:54:28.131Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Bimestre.cs",
-              "DocumentMoniker": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Utilidades\\Bimestre.cs",
-              "RelativeDocumentMoniker": "project_mencao\\Utilidades\\Bimestre.cs",
-              "ToolTip": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Utilidades\\Bimestre.cs",
-              "RelativeToolTip": "project_mencao\\Utilidades\\Bimestre.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T22:52:09.684Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AcaoResposta.cs",
-              "DocumentMoniker": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Utilidades\\AcaoResposta.cs",
-              "RelativeDocumentMoniker": "project_mencao\\Utilidades\\AcaoResposta.cs",
-              "ToolTip": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Utilidades\\AcaoResposta.cs",
-              "RelativeToolTip": "project_mencao\\Utilidades\\AcaoResposta.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T22:52:06.732Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ProdutosRepository.cs",
-              "DocumentMoniker": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Repositories\\ProdutosRepository.cs",
-              "RelativeDocumentMoniker": "project_mencao\\Repositories\\ProdutosRepository.cs",
-              "ToolTip": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Repositories\\ProdutosRepository.cs",
-              "RelativeToolTip": "project_mencao\\Repositories\\ProdutosRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T22:51:52.398Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PedidosRepository.cs",
-              "DocumentMoniker": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Repositories\\PedidosRepository.cs",
-              "RelativeDocumentMoniker": "project_mencao\\Repositories\\PedidosRepository.cs",
-              "ToolTip": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Repositories\\PedidosRepository.cs",
-              "RelativeToolTip": "project_mencao\\Repositories\\PedidosRepository.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAgwEIAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T22:51:51.636Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TableDataNotasDTO.cs",
-              "DocumentMoniker": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Models\\TableDataNotasDTO.cs",
-              "RelativeDocumentMoniker": "project_mencao\\Models\\TableDataNotasDTO.cs",
-              "ToolTip": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Models\\TableDataNotasDTO.cs",
-              "RelativeToolTip": "project_mencao\\Models\\TableDataNotasDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T22:51:44.568Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TabelaDePedidosDTO.cs",
-              "DocumentMoniker": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Models\\TabelaDePedidosDTO.cs",
-              "RelativeDocumentMoniker": "project_mencao\\Models\\TabelaDePedidosDTO.cs",
-              "ToolTip": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Models\\TabelaDePedidosDTO.cs",
-              "RelativeToolTip": "project_mencao\\Models\\TabelaDePedidosDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T22:51:37.329Z",
+              "WhenOpened": "2026-03-30T02:56:00.914Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Pedido.cs",
-              "DocumentMoniker": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Models\\Pedido.cs",
-              "RelativeDocumentMoniker": "project_mencao\\Models\\Pedido.cs",
-              "ToolTip": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Models\\Pedido.cs",
-              "RelativeToolTip": "project_mencao\\Models\\Pedido.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAdAAAAAAAAAA==",
+              "Title": "HistoricoProdutoTela.cs",
+              "DocumentMoniker": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Telas\\HistoricoProdutoTela.cs",
+              "RelativeDocumentMoniker": "project_mencao\\Telas\\HistoricoProdutoTela.cs",
+              "ToolTip": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Telas\\HistoricoProdutoTela.cs",
+              "RelativeToolTip": "project_mencao\\Telas\\HistoricoProdutoTela.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowBoAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T22:51:33.905Z",
+              "WhenOpened": "2026-03-30T02:56:20.688Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Produto.cs",
-              "DocumentMoniker": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Models\\Produto.cs",
-              "RelativeDocumentMoniker": "project_mencao\\Models\\Produto.cs",
-              "ToolTip": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Models\\Produto.cs",
-              "RelativeToolTip": "project_mencao\\Models\\Produto.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAcAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ComprarProdutosTela.cs",
+              "DocumentMoniker": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Telas\\ComprarProdutosTela.cs",
+              "RelativeDocumentMoniker": "project_mencao\\Telas\\ComprarProdutosTela.cs",
+              "ToolTip": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Telas\\ComprarProdutosTela.cs",
+              "RelativeToolTip": "project_mencao\\Telas\\ComprarProdutosTela.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAAwHQAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T22:51:32.653Z",
+              "WhenOpened": "2026-03-30T02:51:48.571Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ComprarProdutosTela.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Telas\\ComprarProdutosTela.cs",
+              "RelativeDocumentMoniker": "project_mencao\\Telas\\ComprarProdutosTela.cs",
+              "ToolTip": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Telas\\ComprarProdutosTela.cs [Design]",
+              "RelativeToolTip": "project_mencao\\Telas\\ComprarProdutosTela.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T02:51:45.343Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CadastroProdutosTela.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Telas\\CadastroProdutosTela.cs",
+              "RelativeDocumentMoniker": "project_mencao\\Telas\\CadastroProdutosTela.cs",
+              "ToolTip": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Telas\\CadastroProdutosTela.cs [Design]",
+              "RelativeToolTip": "project_mencao\\Telas\\CadastroProdutosTela.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T02:51:43.44Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HistoricoProdutoTela.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Telas\\HistoricoProdutoTela.cs",
+              "RelativeDocumentMoniker": "project_mencao\\Telas\\HistoricoProdutoTela.cs",
+              "ToolTip": "C:\\Users\\chara\\source\\repos\\project_mencao\\project_mencao\\Telas\\HistoricoProdutoTela.cs [Design]",
+              "RelativeToolTip": "project_mencao\\Telas\\HistoricoProdutoTela.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T02:51:40.448Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

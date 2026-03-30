@@ -1,4 +1,5 @@
-﻿using project_mencao.Models;
+﻿using project_mencao.DTOs;
+using project_mencao.Models;
 using project_mencao.Utilidades;
 using System;
 using System.Collections.Generic;
@@ -26,56 +27,43 @@ namespace project_mencao
 
         private void LoginBot_Click(object sender, EventArgs e)
         {
-            String Email = EmailBox.Text;
-            String Senha = SenhaBox.Text;
+            String Erros = Program._loginservice.logar_usuario(
+                new LoginDTO(
+                        EmailBox.Text,
+                        SenhaBox.Text
+                    )
+                );
 
-            String Erros = "";
-
-            if (String.IsNullOrWhiteSpace(Email))
-            {
-                Erros += "O campo email é obrigatório.\n";
-            }
-            if (String.IsNullOrWhiteSpace(Senha))
-            {
-                Erros += "O campo senha é obrigatório.\n";
-            }
+            
 
             if (Erros.Equals(""))
-            {
-                Usuario usuario = new Usuario(Email, Senha);
-                if (Program._loginRepo.usuario_existe(usuario))
-                {
+            {                
+                MessageBox.Show(
+                    AcaoResposta.LoginSucesso,
+                    AcaoResposta.Sucesso,
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Asterisk);
 
-                    Program._usuarioLogado = Program._loginRepo.pegar_usuario(usuario);
-                    MessageBox.Show(
-                        AcaoResposta.LoginSucesso,
-                        AcaoResposta.Sucesso,
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Asterisk);
-
-                    this.Hide();
-                    Program._hubtela.Show();
-                    EmailBox.Text = "";
-                    SenhaBox.Text = "";
-                }
-                else
-                {
-                    MessageBox.Show(
-                        AcaoResposta.EmailSenhaErro,
-                        AcaoResposta.Erro,
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error
-                    );
-                }
-            }
-            else
+                this.Hide();
+                Program._hubtela.Show();
+                EmailBox.Text = "";
+                SenhaBox.Text = "";
+            } else if (Erros.Contains("Usuario Inexistente"))
             {
                 MessageBox.Show(
-                    Erros,
+                    AcaoResposta.EmailSenhaErro,
                     AcaoResposta.Erro,
                     MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-            }
+                    MessageBoxIcon.Error
+                );
+            }else
+                {
+                    MessageBox.Show(
+                        Erros,
+                        AcaoResposta.Erro,
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
         }
 
         private void VoltarAoRegistroBot_Click(object sender, EventArgs e)

@@ -21,23 +21,10 @@ namespace project_mencao.Telas
         public void carregar_historico()
         {
             TabelaDeHistorico.Columns.Clear();
-            List<Pedido> pedidos = Program._pedidosrepo.listar_pedidos(
-                Program._loginRepo.pegar_id_do_usuario(Program._usuarioLogado)
-                );
-            List<TabelaDePedidosDTO> tabelaDePedidosDTOs = new List<TabelaDePedidosDTO>();
-            foreach (Pedido pedido in pedidos)
-            {
 
-                TabelaDePedidosDTO linha = new TabelaDePedidosDTO(
-                    pedido.GetIdDoPedido(),
-                    Program._produtosRepo.pegar_nome_do_produto(pedido.GetIdDoProduto()),
-                    Program._loginRepo.pegar_nome_do_usuario(pedido.GetIdDoUsuario()),
-                    pedido.GetDataDoPedido(),
-                    pedido.GetQuantidade());
-                tabelaDePedidosDTOs.Add(linha);
-            }
             HistoricoCompraLabel.Text = "Historico Das Compras \n De " + Program._usuarioLogado.getNome();
-            TabelaDeHistorico.DataSource = tabelaDePedidosDTOs;
+
+            TabelaDeHistorico.DataSource = Program._produtoservice.carregar_historico();
         }
         private void HistoricoProdutoTela_Shown(object sender, EventArgs e)
         {

@@ -1,4 +1,5 @@
-﻿using project_mencao.Models;
+﻿using project_mencao.DTOs;
+using project_mencao.Models;
 using project_mencao.Utilidades;
 using System;
 using System.Collections.Generic;
@@ -17,12 +18,7 @@ namespace project_mencao.Telas
         /// <summary>
         /// Dicionario para converter Estado Para Frete
         /// </summary>
-        static Dictionary<String,decimal> ValoresDoFrete = new Dictionary<String, decimal>()
-        {
-            {"SP", 3},
-            {"RJ", 5},
-            {"BA", 10}
-        };
+        
         public ComprarProdutosTela()
         {
             InitializeComponent();
@@ -41,7 +37,7 @@ namespace project_mencao.Telas
 
         private void CarregarProdutoBot_Click(object sender, EventArgs e)
         {
-            
+            carregar_dados_do_produto();
         }
 
         public void carregar_dados_do_produto()
@@ -78,41 +74,26 @@ namespace project_mencao.Telas
         }
         private void CompraProdutoBot_Click(object sender, EventArgs e)
         {
-            Object EstadoSelecionadoPuro = EstadoComboBox.SelectedItem;
-            String Estado;
 
             bool QuantValida = int.TryParse(QuantBox.Text, out int Quantidade);
 
-            String Erros = "";
+            decimal ValorFinal = decimal.Parse(ValorFinalLabel.Text);
 
-            if (EstadoSelecionadoPuro != null)
-            {
-                Estado = EstadoSelecionadoPuro.ToString();
-            }
-            else
-            {
-                Erros += "Selecione um estado para entrega\n";
-            }
-
-            if (Quantidade < 0 || !QuantValida)
-            {
-                Erros += "Digite uma quantidade valida\n";
-            }
-
-            if (Erros.Equals(""))
-            {
-
-                decimal ValorFinal = decimal.Parse(ValorFinalLabel.Text);
-
-                decimal ValorDoPedido = ValorFinal * Quantidade;
-
-
-                Program._pedidosrepo.criar_pedido(
+            decimal ValorDoPedido = ValorFinal * Quantidade;
+            String Erros = Program._pedidoservice.comprar_produto(
+                new ProdutoDTO(
+                    EstadoComboBox.SelectedItem.ToString(),
+                    Quantidade
+                ), 
+                new PedidoDTO(
                     Program._loginRepo.pegar_id_do_usuario(Program._usuarioLogado),
                     long.Parse(ProdutoSelecionadoCombo.SelectedItem.ToString().Split('-')[0].Trim()),
                     ValorDoPedido,
-                    Quantidade
-                    );
+                    Quantidade)
+                );
+
+            if (Erros.Equals(""))
+            {
                 MessageBox.Show(
                     AcaoResposta.ProdutoComprado,
                     AcaoResposta.Sucesso,
@@ -139,11 +120,8 @@ namespace project_mencao.Telas
         
         public void atualizar_lista_de_produtos()
         {
-            if (Program._produtosRepo.listar_produtos().Count == 0)
-            {
-                Program._produtosRepo.criar_produto_base();
-            }
-            ProdutoSelecionadoCombo.DataSource = Program._produtosRepo.listar_produtos();
+
+            ProdutoSelecionadoCombo.DataSource = Program._produtoservice.atualizar_lista_de_produtos();
             
         }
         private void ComprarProdutosTela_Shown(object sender, EventArgs e)
@@ -176,42 +154,23 @@ namespace project_mencao.Telas
 
         public void atualizar_valor_final()
         {
-            Object EstadoPuro = EstadoComboBox.SelectedItem;
-            String Estado = "";
-            String Erros = "";
 
-            bool QuantValida = decimal.TryParse(QuantBox.Text, out decimal Quantidade);
 
-            decimal Frete = 15;
+            bool QuantValida = int.TryParse(QuantBox.Text, out int Quantidade);
 
-            if (EstadoPuro != null)
+            PedidoCalculoRespostaDTO resposta = Program._produtoservice.calcular_frete(
+                new PedidoDTO(
+                    EstadoComboBox.SelectedItem.ToString(),
+                    decimal.Parse(ValorBox.Text),
+                    Quantidade));
+
+            
+
+            if (resposta.Erros.Equals(""))
             {
-                Estado = EstadoPuro.ToString();
-            }
-            else
-            {
-                Erros += "Selecione Um Estado";
-            }
 
-            if (Quantidade < 0 || !QuantValida)
-            {
-                Erros += "Coloque uma Quantidade Valida";
-            }
-
-
-            if (Erros.Equals(""))
-            {
-                bool FreteDiferente = ValoresDoFrete.TryGetValue(Estado.Split('-')[0].Trim(), out decimal _Frete);
-
-                if (FreteDiferente)
-                {
-                    Frete = _Frete;
-                }
-
-                decimal ValorFinal = (decimal.Parse(ValorBox.Text) * Quantidade) + Frete ;
-
-                ValorDoFreteLabel.Text = Frete.ToString();
-                ValorFinalLabel.Text = ValorFinal.ToString();
+                ValorDoFreteLabel.Text = resposta.Frete.ToString();
+                ValorFinalLabel.Text = resposta.ValorFinal.ToString();
 
             }
         }
@@ -241,6 +200,11 @@ namespace project_mencao.Telas
         private void ComprarProdutosTela_VisibleChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void CarregarProdutoBot_Click_1(object sender, EventArgs e)
+        {
+            carregar_dados_do_produto();
         }
     }
 }

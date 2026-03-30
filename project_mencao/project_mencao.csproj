@@ -98,17 +98,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTOs\AlunoDTO.cs" />
+    <Compile Include="DTOs\PedidoCalculoRespostaDTO.cs" />
+    <Compile Include="DTOs\PedidoDTO.cs" />
+    <Compile Include="DTOs\ProdutoDTO.cs" />
+    <Compile Include="DTOs\LoginDTO.cs" />
     <Compile Include="Models\Aluno.cs" />
     <Compile Include="Models\Produto.cs" />
     <Compile Include="Models\Pedido.cs" />
-    <Compile Include="Models\TabelaDePedidosDTO.cs" />
-    <Compile Include="Models\TableDataNotasDTO.cs" />
+    <Compile Include="DTOs\TabelaDePedidosDTO.cs" />
+    <Compile Include="DTOs\TableDataNotasDTO.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Repositories\AlunosRepository.cs" />
     <Compile Include="Repositories\DatabaseConnector.cs" />
     <Compile Include="Repositories\NotasRepository.cs" />
     <Compile Include="Repositories\PedidosRepository.cs" />
     <Compile Include="Repositories\ProdutosRepository.cs" />
+    <Compile Include="Services\AlunoService.cs" />
+    <Compile Include="Services\LoginService.cs" />
+    <Compile Include="Services\NotaService.cs" />
+    <Compile Include="Services\PedidoService.cs" />
+    <Compile Include="Services\ProdutoService.cs" />
     <Compile Include="Telas\CadastroDeAluno.cs">
       <SubType>Form</SubType>
     </Compile>

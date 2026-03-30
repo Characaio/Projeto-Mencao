@@ -1,5 +1,6 @@
 ﻿using project_mencao.Models;
 using project_mencao.Repositories;
+using project_mencao.Services;
 using project_mencao.Telas;
 using System;
 using System.Collections.Generic;
@@ -21,11 +22,17 @@ namespace project_mencao
         static public HistoricoProdutoTela _historicoprodutostela;
         
 
-        static public LoginRepository _loginRepo;
         static public AlunosRepository _alunosRepo;
+        static public LoginRepository _loginRepo;
         static public NotasRepository _notasRepo;
-        static public ProdutosRepository _produtosRepo;
         static public PedidosRepository _pedidosrepo;
+        static public ProdutosRepository _produtosRepo;
+
+        static public AlunoService _alunoservice;
+        static public LoginService _loginservice;
+        static public NotaService _notaservice;
+        static public PedidoService _pedidoservice;
+        static public ProdutoService _produtoservice;
 
         static public Usuario _usuarioLogado;  
         static public Form _telaAtual;
@@ -46,6 +53,11 @@ namespace project_mencao
             _cadastroprodutostela = new CadastroProdutosTela();
             _historicoprodutostela = new HistoricoProdutoTela();
 
+            _alunoservice= new AlunoService();
+            _loginservice= new LoginService();
+            _notaservice= new NotaService();
+            _pedidoservice= new PedidoService();
+            _produtoservice= new ProdutoService();
 
             _loginRepo = new LoginRepository();
             _alunosRepo = new AlunosRepository();

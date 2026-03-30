@@ -1,4 +1,5 @@
-﻿using project_mencao.Models;
+﻿using project_mencao.DTOs;
+using project_mencao.Models;
 using project_mencao.Telas;
 using project_mencao.Utilidades;
 using System;
@@ -22,45 +23,23 @@ namespace project_mencao
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String Nome = NomeBox.Text;
-            String Telefone = TelefoneMBox.Text;
-            String Email = EmailBox.Text;
-            String Senha = SenhaBox.Text;
-            Object MateriaLecionadaObj = MateriaComboBox.SelectedItem;
-            String MateriaLecionada = "";
 
-            String Erros = "";
+            String Erros = Program._loginservice.cadastrar_usuario(
+                new LoginDTO
+                    (
+                        NomeBox.Text,
+                        TelefoneMBox.Text,
+                        EmailBox.Text,
+                        SenhaBox.Text,
+                        MateriaComboBox.SelectedItem.ToString()
+                    )
+                );
 
-            if (String.IsNullOrWhiteSpace(Nome) ) {
-                Erros += "O campo nome é obrigatório.\n";
-            }
-            if (String.IsNullOrWhiteSpace(Telefone))
-            {
-                Erros += "O campo telefone é obrigatório.\n";
-            }
-            if (String.IsNullOrWhiteSpace(Email))
-            {
-                Erros += "O campo email é obrigatório.\n";
-            }
-            if (String.IsNullOrWhiteSpace(Senha))
-            {
-                Erros += "O campo senha é obrigatório.\n";
-            }
-            if (MateriaLecionadaObj != null)
-            {
-                MateriaLecionada = MateriaLecionadaObj.ToString();
-            }
-            else
-            {
-                Erros += "O campo matéria lecionada é obrigatório.\n";  
-            }
+            
 
             if (Erros.Equals(""))
             {
-                Usuario usuario = new Usuario(Nome, Telefone, Email, Senha, MateriaLecionada);
-
-                Program._loginRepo.cadastrar_usuario(usuario);
-                Program._usuarioLogado = usuario;
+                
                 MessageBox.Show(
                     AcaoResposta.CadastroSucesso,
                     AcaoResposta.Sucesso,

@@ -1,4 +1,5 @@
-﻿using project_mencao.Models;
+﻿using project_mencao.DTOs;
+using project_mencao.Models;
 using project_mencao.Utilidades;
 using System;
 using System.Collections.Generic;
@@ -26,52 +27,23 @@ namespace project_mencao.Telas
 
         private void CadastroBot_Click(object sender, EventArgs e)
         {
-            String Nome = NomeBox.Text;
+
             bool PreçoValido = decimal.TryParse(ValorBox.Text, out decimal Preco);
-            String Descricao = DescriMultiLineBox.Text;
-            String Marca = MarcaBox.Text;
+            
+            String Erros = Program._produtoservice.cadastrar_produto(
+                new ProdutoDTO(
+                    NomeBox.Text,
+                    Preco,
+                    DescriMultiLineBox.Text,
+                    MarcaBox.Text,
+                    TipoComboBox.SelectedItem.ToString()
+                ));
 
-            String Erros = "";
-
-            if (String.IsNullOrWhiteSpace(Nome))
-            {
-                Erros += "O nome do produto é obrigatório.\n";
-            }
-
-            if (!PreçoValido || Preco < 0)
-            {
-                Erros += "Digite um preço válido para o produto.\n";
-            }
-
-            if (String.IsNullOrWhiteSpace(Descricao))
-            {
-                Erros += "A descrição do produto é obrigatória.\n";
-            }
-
-            if (String.IsNullOrWhiteSpace(Marca))
-            {
-                Erros += "A marca do produto é obrigatória.\n";
-            }
-            Object TipoSelecionadoPuro = TipoComboBox.SelectedItem;
-            String Tipo = "";
-            if (TipoSelecionadoPuro != null)
-            {
-                Tipo = TipoSelecionadoPuro.ToString();
-            }
-            else
-            {
-                Erros += "Selecione um tipo para o produto.\n";
-            }
+            
 
             if (Erros.Equals(""))
             {
-                Program._produtosRepo.cadastrar_produto(new Produto(
-                    Nome,
-                    Descricao,
-                    Marca,
-                    Tipo,
-                    Preco
-                    ));
+                
 
                 NomeBox.Text = "";
                 MarcaBox.Text = "";

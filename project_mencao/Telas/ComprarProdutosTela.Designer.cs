@@ -56,6 +56,7 @@
             this.IrParaHistoricoDeCompraBot = new System.Windows.Forms.Button();
             this.VoltarTelaPrincipalBot = new System.Windows.Forms.Button();
             this.IrParaCadastro = new System.Windows.Forms.Button();
+            this.CarregarProdutoBot = new System.Windows.Forms.Button();
             this.PainelDeCompra.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,9 +73,9 @@
             // ProdutoSelecionadoCombo
             // 
             this.ProdutoSelecionadoCombo.FormattingEnabled = true;
-            this.ProdutoSelecionadoCombo.Location = new System.Drawing.Point(23, 116);
+            this.ProdutoSelecionadoCombo.Location = new System.Drawing.Point(16, 103);
             this.ProdutoSelecionadoCombo.Name = "ProdutoSelecionadoCombo";
-            this.ProdutoSelecionadoCombo.Size = new System.Drawing.Size(241, 21);
+            this.ProdutoSelecionadoCombo.Size = new System.Drawing.Size(258, 21);
             this.ProdutoSelecionadoCombo.TabIndex = 2;
             this.ProdutoSelecionadoCombo.SelectedIndexChanged += new System.EventHandler(this.ProdutoSelecionadoCombo_SelectedIndexChanged);
             // 
@@ -82,7 +83,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label2.Location = new System.Drawing.Point(56, 82);
+            this.label2.Location = new System.Drawing.Point(57, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(163, 20);
             this.label2.TabIndex = 3;
@@ -201,9 +202,9 @@
             this.PainelDeCompra.Controls.Add(this.label10);
             this.PainelDeCompra.Controls.Add(this.EstadoComboBox);
             this.PainelDeCompra.Controls.Add(this.label9);
-            this.PainelDeCompra.Location = new System.Drawing.Point(16, 186);
+            this.PainelDeCompra.Location = new System.Drawing.Point(16, 196);
             this.PainelDeCompra.Name = "PainelDeCompra";
-            this.PainelDeCompra.Size = new System.Drawing.Size(428, 252);
+            this.PainelDeCompra.Size = new System.Drawing.Size(428, 242);
             this.PainelDeCompra.TabIndex = 15;
             this.PainelDeCompra.Visible = false;
             // 
@@ -349,7 +350,7 @@
             this.VoltarTelaPrincipalBot.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.VoltarTelaPrincipalBot.Location = new System.Drawing.Point(16, 12);
             this.VoltarTelaPrincipalBot.Name = "VoltarTelaPrincipalBot";
-            this.VoltarTelaPrincipalBot.Size = new System.Drawing.Size(248, 44);
+            this.VoltarTelaPrincipalBot.Size = new System.Drawing.Size(258, 44);
             this.VoltarTelaPrincipalBot.TabIndex = 17;
             this.VoltarTelaPrincipalBot.Text = "Voltar a Tela Principal";
             this.VoltarTelaPrincipalBot.UseVisualStyleBackColor = true;
@@ -366,11 +367,23 @@
             this.IrParaCadastro.UseVisualStyleBackColor = true;
             this.IrParaCadastro.Click += new System.EventHandler(this.IrParaCadastro_Click);
             // 
+            // CarregarProdutoBot
+            // 
+            this.CarregarProdutoBot.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.CarregarProdutoBot.Location = new System.Drawing.Point(16, 130);
+            this.CarregarProdutoBot.Name = "CarregarProdutoBot";
+            this.CarregarProdutoBot.Size = new System.Drawing.Size(258, 44);
+            this.CarregarProdutoBot.TabIndex = 19;
+            this.CarregarProdutoBot.Text = "Carregar Dados Do Produto";
+            this.CarregarProdutoBot.UseVisualStyleBackColor = true;
+            this.CarregarProdutoBot.Click += new System.EventHandler(this.CarregarProdutoBot_Click_1);
+            // 
             // ComprarProdutosTela
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CarregarProdutoBot);
             this.Controls.Add(this.IrParaCadastro);
             this.Controls.Add(this.VoltarTelaPrincipalBot);
             this.Controls.Add(this.IrParaHistoricoDeCompraBot);
@@ -432,5 +445,6 @@
         private System.Windows.Forms.Button IrParaHistoricoDeCompraBot;
         private System.Windows.Forms.Button VoltarTelaPrincipalBot;
         private System.Windows.Forms.Button IrParaCadastro;
+        private System.Windows.Forms.Button CarregarProdutoBot;
     }
 }
