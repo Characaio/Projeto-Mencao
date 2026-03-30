@@ -1,10 +1,4 @@
-<h1>Objetivo Do Projeto</h1>
-
-<p>
-  Esse projeto foi criado com base nos seguintes requisitos passados pelo professor: <br>
-</p>
-
-<br>
+<h1>Projeto-Menção</h1>
 
 <h2>Descrição do Sistema</h2>
 
