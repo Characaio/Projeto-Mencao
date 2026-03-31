@@ -10,6 +10,11 @@ namespace project_mencao.Services
     internal class NotaService
     {
         static bool AtualizarCombo = false;
+
+        /// <summary>
+        /// Essa função pega todos os dados do aluno juntamente com suas notas e retorna eles
+        /// </summary>
+        /// <returns>Dados do aluno obtidos</returns>
         public List<TableDataNotasDTO> carregar_tabela() 
         {
             List<TableDataNotasDTO> resultadoDaTabela = new List<TableDataNotasDTO>();
@@ -26,6 +31,7 @@ namespace project_mencao.Services
                 {
                     aluno.adicionar_Nota(nota);
                 }
+
                 Nota Bim1 = aluno.getPrimeiroBimestre();
                 Nota Bim2 = aluno.getSegundoBimestre();
                 Nota Bim3 = aluno.getTerceiroBimestre();
@@ -80,6 +86,7 @@ namespace project_mencao.Services
                 {
                     linha.NotaFinal = 0;
                 }
+
                 resultadoDaTabela.Add(linha);
                 String linhaCombo = String.Format("{0} {1}", aluno.getMatricula(), aluno.getNome());
                 resultadoDaCombo.Add(linhaCombo);
@@ -90,6 +97,10 @@ namespace project_mencao.Services
             
         }
 
+        /// <summary>
+        /// Pega TODOS os Ids e nomes dos alunos
+        /// </summary>
+        /// <returns>Lista com todos os Ids e Nomes no formato de "ID" "NOME" </returns>
         public List<String> carregar_combo()
         {
             List<String> resultadoDaCombo = new List<String>();

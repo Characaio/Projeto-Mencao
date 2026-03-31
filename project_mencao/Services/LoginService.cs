@@ -10,22 +10,29 @@ namespace project_mencao.Services
 {
     internal class LoginService
     {
-        public String logar_usuario(LoginDTO loginDto)
+
+        /// <summary>
+        /// <para>Essa função aplica a regra de negócio nos dados do usuario.</para>
+        /// <para>Faz o login do usuario APENAS se não houver erros E se ele NÃO existe</para>
+        /// </summary>
+        /// <param name="usuarioDto">Dados do Usuario para ser cadastrado.</param>
+        /// <returns>Retorna os erros de validação ocorridos durante a função, caso não tenha, retorna uma String vazia.</returns>
+        public String logar_usuario(UsuarioDTO usuarioDto)
         {
             String Erros = "";
 
-            if (String.IsNullOrWhiteSpace(loginDto.Email))
+            if (String.IsNullOrWhiteSpace(usuarioDto.Email))
             {
                 Erros += "O campo email é obrigatório.\n";
             }
-            if (String.IsNullOrWhiteSpace(loginDto.Senha))
+            if (String.IsNullOrWhiteSpace(usuarioDto.Senha))
             {
                 Erros += "O campo senha é obrigatório.\n";
             }
 
             if (Erros.Equals(""))
             {
-                Usuario usuario = new Usuario(loginDto.Email, loginDto.Senha);
+                Usuario usuario = new Usuario(usuarioDto.Email, usuarioDto.Senha);
                 if (Program._loginRepo.usuario_existe(usuario))
                 {
                     Program._usuarioLogado = Program._loginRepo.pegar_usuario(usuario);
@@ -37,7 +44,14 @@ namespace project_mencao.Services
             }
             return Erros;
         }
-        public String cadastrar_usuario(LoginDTO loginDto)
+
+        /// <summary>
+        /// <para>Essa função aplica a regra de negócio nos dados do usuario.</para>
+        /// <para>Cadastra o usuario APENAS se não houver erros E se ele NÃO existe</para>
+        /// </summary>
+        /// <param name="usuarioDto">Dados do Usuario para ser cadastrado.</param>
+        /// <returns>Retorna os erros de validação ocorridos durante a função, caso não tenha, retorna uma String vazia.</returns>
+        public String cadastrar_usuario(UsuarioDTO loginDto)
         {
             String Erros = "";
 
@@ -70,9 +84,14 @@ namespace project_mencao.Services
                     loginDto.Email,
                     loginDto.Senha,
                     loginDto.MateriaLecionada);
-
-                Program._loginRepo.cadastrar_usuario(usuario);
-                Program._usuarioLogado = usuario;
+                if (!Program._loginRepo.usuario_existe(usuario))
+                {
+                    Program._loginRepo.cadastrar_usuario(usuario);
+                    Program._usuarioLogado = usuario;
+                } else
+                {
+                    Erros += "Usuario Ja Existe.";
+                }
             }
 
             return Erros;

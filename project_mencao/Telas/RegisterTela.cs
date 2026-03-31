@@ -25,7 +25,7 @@ namespace project_mencao
         {
 
             String Erros = Program._loginservice.cadastrar_usuario(
-                new LoginDTO
+                new UsuarioDTO
                     (
                         NomeBox.Text,
                         TelefoneMBox.Text,

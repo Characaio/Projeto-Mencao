@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace project_mencao.Models
 {
     /// <summary>
-    /// <para>Classe que representa a entidade Pedidos do banco de dados</para>
+    /// <para>Classe que representa a entidade Pedidos do banco de dados no sistema.</para>
     /// <para>Transfere Informações basica sobre o pedido</para>
     /// </summary>
     internal class Pedido

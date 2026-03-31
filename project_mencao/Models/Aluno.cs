@@ -7,6 +7,11 @@ using System.Windows.Forms;
 
 namespace project_mencao
 {
+    /// <summary>
+    /// <para>Classe que representa a entidade Aluno do banco de dados no sistema.</para>
+    /// <para>Ela serve para transportar as informações do aluno.</para>
+    /// <para>Ela permite a adição de nota para um bimestre e permite pegar a nota de um bimestre</para>
+    /// </summary>
     internal class Aluno
     {
         private long Matricula;

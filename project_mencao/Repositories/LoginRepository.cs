@@ -55,7 +55,7 @@ namespace project_mencao
         /// <para>Verifica a existencia do usuario</para>
         /// </summary>
         /// <param name="usuario">Usuario usada para extrair informações</param>
-        /// <returns></returns>
+        /// <returns>Retorna True caso exista, caso não, Retorna False</returns>
         public bool usuario_existe(Usuario usuario)
         {
             using (var conn = new DatabaseConnector().GetConnection())
@@ -111,6 +111,11 @@ namespace project_mencao
             }
         }
 
+        /// <summary>
+        /// Essa função pega o nome do usuario com base no Id do mesmo
+        /// </summary>
+        /// <param name="UsuarioId">Id Do Usuario</param>
+        /// <returns>Nome do usario em String</returns>
         public String pegar_nome_do_usuario(long UsuarioId)
         {
             using (var conn = new DatabaseConnector().GetConnection())
@@ -130,6 +135,11 @@ namespace project_mencao
             return null;
         }
 
+        /// <summary>
+        /// Essa função pega o id do usuario com base em seu Email e sua Senha
+        /// </summary>
+        /// <param name="usuario">Usuario para extrair informações</param>
+        /// <returns>Id Do Usuario em Long</returns>
         public long pegar_id_do_usuario(Usuario usuario)
         {
 

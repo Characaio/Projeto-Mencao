@@ -23,6 +23,12 @@ namespace project_mencao.Services
             {"BA", 10}
         };
 
+        /// <summary>
+        /// <para>Essa função aplica a regra de negócio nos dados do produto.</para>
+        /// <para>Cadastra o produto APENAS se não houver erros.</para>
+        /// </summary>
+        /// <param name="produtoDto">Dados do produto para ser cadastrado.</param>
+        /// <returns>Retorna os erros de validação ocorridos durante a função, caso não tenha, retorna uma String vazia.</returns>
         public String cadastrar_produto(ProdutoDTO produtoDto)
         {
             String Erros = "";
@@ -64,6 +70,10 @@ namespace project_mencao.Services
             return Erros;
         }
 
+        /// <summary>
+        /// Essa função pega todos os pedidos com base no usuario logado
+        /// </summary>
+        /// <returns>Pedidos atrelados ao Usuario</returns>
         public List<TabelaDePedidosDTO> carregar_historico()
         {
             List<Pedido> pedidos = Program._pedidosrepo.listar_pedidos(
@@ -85,6 +95,10 @@ namespace project_mencao.Services
             return tabelaDePedidosDTOs;
         }
 
+        /// <summary>
+        /// Verifica se os produtos de exemplo existem, caso não existam, os produtos são criados e retornados
+        /// </summary>
+        /// <returns>Retorna os produtos de exemplo recem criados</returns>
         public List<String> atualizar_lista_de_produtos()
         {
             if (Program._produtosRepo.listar_produtos().Count == 0)
@@ -94,6 +108,19 @@ namespace project_mencao.Services
             return Program._produtosRepo.listar_produtos();
         }
 
+        /// <summary>
+        /// <para>Essa função aplica a regra de negócio nos dados do aluno.</para>
+        /// <para>Cadastra o aluno APENAS se não houver erros.</para>
+        /// </summary>
+        /// <param name="alunoDto">Dados do aluno para ser cadastrado.</param>
+        /// <returns>Retorna os erros de validação ocorridos durante a função, caso não tenha, retorna uma String vazia.</returns>
+
+        /// <summary>
+        /// <para>Essa f~unção aplica a regra de negocio nos dados do pedido do usuario</para>
+        /// <para>Cria os erros de validação, calcula o frete e calcula o valor final</para>
+        /// </summary>
+        /// <param name="pedidoDTO">Dados do pedido para calcular o frete</param>
+        /// <returns>Retorna um objeto com 3 informações, preço final, valor do frete e erros de validação</returns>
         public PedidoCalculoRespostaDTO calcular_frete(PedidoDTO pedidoDTO)
         {
             String Erros = "";

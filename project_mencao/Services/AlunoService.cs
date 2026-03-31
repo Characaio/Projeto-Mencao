@@ -10,6 +10,12 @@ namespace project_mencao.Services
     internal class AlunoService
     {
 
+        /// <summary>
+        /// <para>Essa função aplica a regra de negócio nos dados do aluno.</para>
+        /// <para>Cadastra o aluno APENAS se não houver erros.</para>
+        /// </summary>
+        /// <param name="alunoDto">Dados do aluno para ser cadastrado.</param>
+        /// <returns>Retorna os erros de validação ocorridos durante a função, caso não tenha, retorna uma String vazia.</returns>
         public String cadastrar_aluno(AlunoDTO alunoDto)
         {
             String Erros = "";
@@ -23,12 +29,12 @@ namespace project_mencao.Services
             {
                 Erros += "O campo turma é obrigatório.\n";
             }
-
-            Program._alunosRepo.cadastrar_aluno(new Aluno(
-                alunoDto.Nome,
-                alunoDto.Turma
-                ));
-
+            if (Erros.Equals("")) { 
+                Program._alunosRepo.cadastrar_aluno(new Aluno(
+                    alunoDto.Nome,
+                    alunoDto.Turma
+                    ));
+            }
             return Erros;
         }
     }

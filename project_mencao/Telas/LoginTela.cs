@@ -28,7 +28,7 @@ namespace project_mencao
         private void LoginBot_Click(object sender, EventArgs e)
         {
             String Erros = Program._loginservice.logar_usuario(
-                new LoginDTO(
+                new UsuarioDTO(
                         EmailBox.Text,
                         SenhaBox.Text
                     )

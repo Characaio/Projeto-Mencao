@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace project_mencao
 {
     /// <summary>
-    /// <para>Classe que representa a nota do aluno no sistema.</para>
+    /// <para>Classe que representa a entidade de Nota do banco de dados no sistema.</para>
     /// <para>Ela serve para transportar as informações da nota do aluno.</para>
     /// <para>Ela permite a extração de campos como a nota da prova, nota da atividade, nota de comportamento e a nota final.</para>
     /// <para>A nota final É calculada com base nas outras notas mas pode ser passada unicamente no caso de ser a nota final do aluno.</para>

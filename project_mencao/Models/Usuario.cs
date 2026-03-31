@@ -8,7 +8,7 @@ using Org.BouncyCastle.Crypto.Generators;
 namespace project_mencao.Models
 {
     /// <summary>
-    /// <para>Classe que representa o usuario no sistema.</para>
+    /// <para>Classe que representa a entidade Usuario do banco de dados no sistema..</para>
     /// <para>Ela serve para transportar informações tanto do banco de dados para o sistema e vice-versa</para>
     /// </summary>
     internal class Usuario

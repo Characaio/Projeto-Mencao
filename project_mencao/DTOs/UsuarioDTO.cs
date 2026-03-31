@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace project_mencao.DTOs
 {
-    internal class LoginDTO
+    /// <summary>
+    /// <para>Classe que representa as informações do Usuario.</para>
+    /// <para>Ela serve apenas para transportar informações dada para ela, ela não tem nenhuma função alem disso.</para>
+    /// </summary>
+    internal class UsuarioDTO
     {
         public String Nome { get; set; }
         public String Telefone { get; set; }
@@ -15,13 +19,13 @@ namespace project_mencao.DTOs
         public String MateriaLecionada { get; set; }
 
 
-        public LoginDTO(String Email, String Senha)
+        public UsuarioDTO(String Email, String Senha)
         {
             this.Email = Email;
             this.Senha = Senha;
         }
 
-        public LoginDTO(String Nome, String Telefone, String Email, String Senha, String MateriaLecionada)
+        public UsuarioDTO(String Nome, String Telefone, String Email, String Senha, String MateriaLecionada)
         {
             this.Nome = Nome;
             this.Telefone = Telefone;

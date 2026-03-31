@@ -102,7 +102,7 @@
     <Compile Include="DTOs\PedidoCalculoRespostaDTO.cs" />
     <Compile Include="DTOs\PedidoDTO.cs" />
     <Compile Include="DTOs\ProdutoDTO.cs" />
-    <Compile Include="DTOs\LoginDTO.cs" />
+    <Compile Include="DTOs\UsuarioDTO.cs" />
     <Compile Include="Models\Aluno.cs" />
     <Compile Include="Models\Produto.cs" />
     <Compile Include="Models\Pedido.cs" />
